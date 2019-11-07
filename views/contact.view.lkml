@@ -67,32 +67,7 @@ view: contact {
   dimension: property_followercount {
     type: number
     sql: ${TABLE}."PROPERTY_FOLLOWERCOUNT" ;;
-  }
-
-
-  dimension: property_hs_all_accessible_team_ids {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_ALL_ACCESSIBLE_TEAM_IDS" ;;
-  }
-
-  dimension: property_hs_all_owner_ids {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_ALL_OWNER_IDS" ;;
-  }
-
-  dimension: property_hs_all_team_ids {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_ALL_TEAM_IDS" ;;
-  }
-
-  dimension: property_hs_analytics_average_page_views {
-    type: number
-    sql: ${TABLE}."PROPERTY_HS_ANALYTICS_AVERAGE_PAGE_VIEWS" ;;
-  }
-
-  dimension: property_hs_analytics_first_referrer {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_ANALYTICS_FIRST_REFERRER" ;;
+    hidden: yes
   }
 
   dimension_group: property_hs_analytics_first_timestamp {

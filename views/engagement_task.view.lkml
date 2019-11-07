@@ -11,6 +11,8 @@ view: engagement_task {
     type: number
     # hidden: yes
     sql: ${TABLE}."ENGAGEMENT_ID" ;;
+    hidden: yes
+
   }
 
   dimension: for_object_type {

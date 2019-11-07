@@ -1,19 +1,7 @@
 view: engagement_company {
   sql_table_name: HUBSPOT.ENGAGEMENT_COMPANY ;;
 
-  dimension_group: _fivetran_synced {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}."_FIVETRAN_SYNCED" ;;
-  }
+
 
   dimension: company_id {
     type: number
@@ -25,6 +13,8 @@ view: engagement_company {
     type: number
     # hidden: yes
     sql: ${TABLE}."ENGAGEMENT_ID" ;;
+    hidden: yes
+
   }
 
   measure: count {

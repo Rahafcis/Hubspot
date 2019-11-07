@@ -6,21 +6,11 @@ view: deal {
     primary_key: yes
     type: number
     sql: ${TABLE}."DEAL_ID" ;;
+    hidden: yes
+
   }
 
-  dimension_group: _fivetran_synced {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}."_FIVETRAN_SYNCED" ;;
-  }
+
 
   dimension: deal_pipeline_id {
     type: string

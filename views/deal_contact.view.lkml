@@ -1,19 +1,7 @@
 view: deal_contact {
   sql_table_name: HUBSPOT.DEAL_CONTACT ;;
 
-  dimension_group: _fivetran_synced {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}."_FIVETRAN_SYNCED" ;;
-  }
+
 
   dimension: contact_id {
     type: number

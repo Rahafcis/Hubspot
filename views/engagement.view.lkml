@@ -8,19 +8,7 @@ view: engagement {
     sql: ${TABLE}."ID" ;;
   }
 
-  dimension_group: _fivetran_synced {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}."_FIVETRAN_SYNCED" ;;
-  }
+
 
   dimension: active {
     type: yesno

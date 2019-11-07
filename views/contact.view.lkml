@@ -323,20 +323,7 @@ view: contact {
       year
     ]
     sql: ${TABLE}."PROPERTY_NOTES_LAST_CONTACTED" ;;
-  }
-
-  dimension_group: property_notes_last_updated {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}."PROPERTY_NOTES_LAST_UPDATED" ;;
+    hidden: yes
   }
 
   dimension_group: property_notes_next_activity {

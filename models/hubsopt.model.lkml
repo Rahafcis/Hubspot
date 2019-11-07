@@ -9,9 +9,19 @@ datagroup: hubsopt_default_datagroup {
 }
 
 
+
+
 explore: company {}
 
-explore: contact {}
+explore: contact {
+
+  join: contact_property_history {
+
+  type: left_outer
+  relationship: many_to_many
+  sql_on: ${contact.id}=${contact_property_history.contact_id} ;;
+  }
+}
 
 explore: contact_property_history {}
 

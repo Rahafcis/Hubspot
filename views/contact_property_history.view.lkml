@@ -17,6 +17,7 @@ view: contact_property_history {
 
   dimension: contact_id {
     type: number
+    primary_key: yes
     # hidden: yes
     sql: ${TABLE}."CONTACT_ID" ;;
   }

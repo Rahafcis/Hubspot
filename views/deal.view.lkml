@@ -7,10 +7,7 @@ view: deal {
     type: number
     sql: ${TABLE}."DEAL_ID" ;;
     hidden: yes
-
   }
-
-
 
   dimension: deal_pipeline_id {
     type: string

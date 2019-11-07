@@ -7,21 +7,6 @@ view: company {
     type: number
     sql: ${TABLE}."ID" ;;
   }
-
-  dimension_group: _fivetran_synced {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}."_FIVETRAN_SYNCED" ;;
-  }
-
   dimension: is_deleted {
     type: yesno
     sql: ${TABLE}."IS_DELETED" ;;

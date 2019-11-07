@@ -209,10 +209,6 @@ view: contact {
     hidden: yes
   }
 
-  dimension: property_linkedinbio {
-    type: string
-    sql: ${TABLE}."PROPERTY_LINKEDINBIO" ;;
-  }
 
   dimension: property_linkedinconnections {
     type: number

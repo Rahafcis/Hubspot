@@ -28,6 +28,7 @@ view: contact {
       year
     ]
     sql: ${TABLE}."_FIVETRAN_SYNCED" ;;
+    hidden: yes
   }
 
   dimension: property_address {

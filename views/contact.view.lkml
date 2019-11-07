@@ -203,6 +203,7 @@ view: contact {
   dimension: property_linkedinconnections {
     type: number
     sql: ${TABLE}."PROPERTY_LINKEDINCONNECTIONS" ;;
+    hidden: yes
   }
 
 

@@ -1,19 +1,6 @@
 view: engagement_task {
   sql_table_name: HUBSPOT.ENGAGEMENT_TASK ;;
 
-  dimension_group: _fivetran_synced {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}."_FIVETRAN_SYNCED" ;;
-  }
 
   dimension: body {
     type: string

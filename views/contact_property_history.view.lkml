@@ -1,19 +1,6 @@
 view: contact_property_history {
   sql_table_name: HUBSPOT.CONTACT_PROPERTY_HISTORY ;;
 
-  dimension_group: _fivetran_synced {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}."_FIVETRAN_SYNCED" ;;
-  }
 
   dimension: contact_id {
     type: number

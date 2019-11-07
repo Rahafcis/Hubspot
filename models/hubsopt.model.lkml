@@ -25,7 +25,17 @@ explore: contact {
 
 explore: contact_property_history {}
 
-explore: deal {}
+explore: deal {
+  join: deal_company {
+    relationship: many_to_many
+    sql_on: ${deal.deal_id}=${deal_company.deal_id} ;;
+  }
+
+  join: deal_contact {
+    relationship: many_to_many
+    sql_on: ${deal.deal_id}=${deal_contact.deal_id} ;;
+  }
+}
 
 explore: deal_company {}
 

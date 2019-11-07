@@ -6,7 +6,9 @@ view: contact {
     primary_key: yes
     type: number
     sql: ${TABLE}."ID" ;;
+    group_label: "contact Info"
   }
+
 
   dimension: _fivetran_deleted {
     type: yesno
@@ -37,6 +39,8 @@ view: contact {
   dimension: property_email {
     type: string
     sql: ${TABLE}."PROPERTY_EMAIL" ;;
+    group_label: "contact Info"
+
   }
 
   dimension_group: property_engagements_last_meeting_booked {
@@ -87,15 +91,14 @@ view: contact {
   dimension: property_firstname {
     type: string
     sql: ${TABLE}."PROPERTY_FIRSTNAME" ;;
+    group_label: "contact Info"
+
   }
 
   dimension: property_followercount {
     type: number
     sql: ${TABLE}."PROPERTY_FOLLOWERCOUNT" ;;
   }
-
-
-
 
 
   dimension: property_hs_all_accessible_team_ids {
@@ -494,6 +497,7 @@ view: contact {
   dimension: property_lastname {
     type: string
     sql: ${TABLE}."PROPERTY_LASTNAME" ;;
+    group_label: "contact Info"
   }
 
   dimension: property_lifecyclestage {
@@ -515,6 +519,7 @@ view: contact {
   dimension: property_mobilephone {
     type: string
     sql: ${TABLE}."PROPERTY_MOBILEPHONE" ;;
+    group_label: "contact Info"
   }
 
   dimension_group: property_notes_last_contacted {
@@ -592,6 +597,7 @@ view: contact {
   dimension: property_phone {
     type: string
     sql: ${TABLE}."PROPERTY_PHONE" ;;
+    group_label: "contact Info"
   }
 
   dimension: property_photo {

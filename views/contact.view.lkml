@@ -471,34 +471,10 @@ view: contact {
     sql: ${TABLE}."PROPERTY_IP_LATLON" ;;
   }
 
-  dimension: property_ip_state {
-    type: string
-    sql: ${TABLE}."PROPERTY_IP_STATE" ;;
-  }
-
-  dimension: property_ip_state_code {
-    type: string
-    sql: ${TABLE}."PROPERTY_IP_STATE_CODE" ;;
-  }
-
-  dimension: property_ip_zipcode {
-    type: string
-    sql: ${TABLE}."PROPERTY_IP_ZIPCODE" ;;
-  }
-
-  dimension: property_job_function {
-    type: string
-    sql: ${TABLE}."PROPERTY_JOB_FUNCTION" ;;
-  }
 
   dimension: property_jobtitle {
     type: string
     sql: ${TABLE}."PROPERTY_JOBTITLE" ;;
-  }
-
-  dimension: property_kloutscoregeneral {
-    type: number
-    sql: ${TABLE}."PROPERTY_KLOUTSCOREGENERAL" ;;
   }
 
   dimension_group: property_lastmodifieddate {
@@ -535,20 +511,6 @@ view: contact {
     sql: ${TABLE}."PROPERTY_LINKEDINCONNECTIONS" ;;
   }
 
-  dimension: property_marital_status {
-    type: string
-    sql: ${TABLE}."PROPERTY_MARITAL_STATUS" ;;
-  }
-
-  dimension: property_message {
-    type: string
-    sql: ${TABLE}."PROPERTY_MESSAGE" ;;
-  }
-
-  dimension: property_military_status {
-    type: string
-    sql: ${TABLE}."PROPERTY_MILITARY_STATUS" ;;
-  }
 
   dimension: property_mobilephone {
     type: string
@@ -656,34 +618,10 @@ view: contact {
     sql: ${TABLE}."PROPERTY_RECENT_DEAL_CLOSE_DATE" ;;
   }
 
-  dimension: property_relationship_status {
-    type: string
-    sql: ${TABLE}."PROPERTY_RELATIONSHIP_STATUS" ;;
-  }
-
-  dimension: property_salutation {
-    type: string
-    sql: ${TABLE}."PROPERTY_SALUTATION" ;;
-  }
-
-  dimension: property_school {
-    type: string
-    sql: ${TABLE}."PROPERTY_SCHOOL" ;;
-  }
-
-  dimension: property_seniority {
-    type: string
-    sql: ${TABLE}."PROPERTY_SENIORITY" ;;
-  }
 
   dimension: property_start_date {
     type: string
     sql: ${TABLE}."PROPERTY_START_DATE" ;;
-  }
-
-  dimension: property_state {
-    type: string
-    sql: ${TABLE}."PROPERTY_STATE" ;;
   }
 
   dimension: property_total_revenue {
@@ -691,35 +629,11 @@ view: contact {
     sql: ${TABLE}."PROPERTY_TOTAL_REVENUE" ;;
   }
 
-  dimension: property_twitterbio {
-    type: string
-    sql: ${TABLE}."PROPERTY_TWITTERBIO" ;;
-  }
-
-  dimension: property_twitterhandle {
-    type: string
-    sql: ${TABLE}."PROPERTY_TWITTERHANDLE" ;;
-  }
-
-  dimension: property_twitterprofilephoto {
-    type: string
-    sql: ${TABLE}."PROPERTY_TWITTERPROFILEPHOTO" ;;
-  }
-
   dimension: property_website {
     type: string
     sql: ${TABLE}."PROPERTY_WEBSITE" ;;
   }
 
-  dimension: property_work_email {
-    type: string
-    sql: ${TABLE}."PROPERTY_WORK_EMAIL" ;;
-  }
-
-  dimension: property_zip {
-    type: string
-    sql: ${TABLE}."PROPERTY_ZIP" ;;
-  }
 
   measure: count {
     type: count

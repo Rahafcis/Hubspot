@@ -85,7 +85,6 @@ view: contact {
     hidden: yes
   }
 
-
   dimension: property_hs_analytics_revenue {
     type: number
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_REVENUE" ;;
@@ -161,91 +160,6 @@ view: contact {
     hidden: yes
   }
 
-  dimension_group: property_hs_lifecyclestage_lead {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}."PROPERTY_HS_LIFECYCLESTAGE_LEAD_DATE" ;;
-  }
-
-  dimension_group: property_hs_lifecyclestage_marketingqualifiedlead {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}."PROPERTY_HS_LIFECYCLESTAGE_MARKETINGQUALIFIEDLEAD_DATE" ;;
-    hidden: yes
-  }
-
-  dimension_group: property_hs_lifecyclestage_opportunity {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}."PROPERTY_HS_LIFECYCLESTAGE_OPPORTUNITY_DATE" ;;
-  }
-
-  dimension_group: property_hs_lifecyclestage_other {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}."PROPERTY_HS_LIFECYCLESTAGE_OTHER_DATE" ;;
-  }
-
-  dimension_group: property_hs_lifecyclestage_salesqualifiedlead {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}."PROPERTY_HS_LIFECYCLESTAGE_SALESQUALIFIEDLEAD_DATE" ;;
-  }
-
-  dimension_group: property_hs_lifecyclestage_subscriber {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}."PROPERTY_HS_LIFECYCLESTAGE_SUBSCRIBER_DATE" ;;
-    hidden: yes
-  }
 
   dimension_group: property_hs_sales_email_last_clicked {
     type: time

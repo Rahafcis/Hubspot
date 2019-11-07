@@ -32,10 +32,7 @@ view: contact {
     sql: ${TABLE}."PROPERTY_ADDRESS" ;;
   }
 
-  dimension: property_degree {
-    type: string
-    sql: ${TABLE}."PROPERTY_DEGREE" ;;
-  }
+
 
   dimension: property_email {
     type: string
@@ -97,15 +94,9 @@ view: contact {
     sql: ${TABLE}."PROPERTY_FOLLOWERCOUNT" ;;
   }
 
-  dimension: property_gender {
-    type: string
-    sql: ${TABLE}."PROPERTY_GENDER" ;;
-  }
 
-  dimension: property_graduation_date {
-    type: string
-    sql: ${TABLE}."PROPERTY_GRADUATION_DATE" ;;
-  }
+
+
 
   dimension: property_hs_all_accessible_team_ids {
     type: string
@@ -146,45 +137,6 @@ view: contact {
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_FIRST_TIMESTAMP" ;;
   }
 
-  dimension: property_hs_analytics_first_touch_converting_campaign {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_ANALYTICS_FIRST_TOUCH_CONVERTING_CAMPAIGN" ;;
-  }
-
-  dimension: property_hs_analytics_first_url {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_ANALYTICS_FIRST_URL" ;;
-  }
-
-  dimension: property_hs_analytics_last_referrer {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_ANALYTICS_LAST_REFERRER" ;;
-  }
-
-  dimension: property_hs_analytics_last_touch_converting_campaign {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_ANALYTICS_LAST_TOUCH_CONVERTING_CAMPAIGN" ;;
-  }
-
-  dimension: property_hs_analytics_last_url {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_ANALYTICS_LAST_URL" ;;
-  }
-
-  dimension: property_hs_analytics_num_event_completions {
-    type: number
-    sql: ${TABLE}."PROPERTY_HS_ANALYTICS_NUM_EVENT_COMPLETIONS" ;;
-  }
-
-  dimension: property_hs_analytics_num_page_views {
-    type: number
-    sql: ${TABLE}."PROPERTY_HS_ANALYTICS_NUM_PAGE_VIEWS" ;;
-  }
-
-  dimension: property_hs_analytics_num_visits {
-    type: number
-    sql: ${TABLE}."PROPERTY_HS_ANALYTICS_NUM_VISITS" ;;
-  }
 
   dimension: property_hs_analytics_revenue {
     type: number
@@ -241,26 +193,6 @@ view: contact {
     sql: ${TABLE}."PROPERTY_HS_EMAIL_LAST_EMAIL_NAME" ;;
   }
 
-  dimension: property_hs_email_optout {
-    type: yesno
-    sql: ${TABLE}."PROPERTY_HS_EMAIL_OPTOUT" ;;
-  }
-
-  dimension: property_hs_email_optout_3308717 {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_EMAIL_OPTOUT_3308717" ;;
-  }
-
-  dimension: property_hs_email_quarantined {
-    type: yesno
-    sql: ${TABLE}."PROPERTY_HS_EMAIL_QUARANTINED" ;;
-  }
-
-  dimension: property_hs_emailconfirmationstatus {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_EMAILCONFIRMATIONSTATUS" ;;
-  }
-
   dimension: property_hs_facebookid {
     type: string
     sql: ${TABLE}."PROPERTY_HS_FACEBOOKID" ;;
@@ -284,26 +216,6 @@ view: contact {
   dimension: property_hs_googleplusid {
     type: string
     sql: ${TABLE}."PROPERTY_HS_GOOGLEPLUSID" ;;
-  }
-
-  dimension: property_hs_ip_timezone {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_IP_TIMEZONE" ;;
-  }
-
-  dimension: property_hs_language {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_LANGUAGE" ;;
-  }
-
-  dimension: property_hs_lead_status {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_LEAD_STATUS" ;;
-  }
-
-  dimension: property_hs_legal_basis {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_LEGAL_BASIS" ;;
   }
 
   dimension_group: property_hs_lifecyclestage_customer {

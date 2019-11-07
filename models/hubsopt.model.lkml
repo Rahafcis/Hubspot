@@ -30,7 +30,6 @@ explore: contact {
   }
 }
 
-explore: contact_property_history {}
 
 explore: deal {
   join: deal_company {

@@ -18,6 +18,7 @@ explore: company {
     sql_on: ${company.id}=${company_property_history.company_id} ;;
 
   }
+
 }
 
 explore: contact {
@@ -27,6 +28,13 @@ explore: contact {
   type: left_outer
   relationship: many_to_many
   sql_on: ${contact.id}=${contact_property_history.contact_id} ;;
+  }
+
+
+  join: company_property_history {
+    type: left_outer
+    relationship: many_to_many
+    sql_on: ${company_property_history.source_id}=${contact_property_history.source_id} ;;
   }
 }
 

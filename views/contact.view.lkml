@@ -13,6 +13,7 @@ view: contact {
   dimension: _fivetran_deleted {
     type: yesno
     sql: ${TABLE}."_FIVETRAN_DELETED" ;;
+    hidden: yes
   }
 
   dimension_group: _fivetran_synced {
@@ -34,45 +35,12 @@ view: contact {
     sql: ${TABLE}."PROPERTY_ADDRESS" ;;
   }
 
-
-
   dimension: property_email {
     type: string
     sql: ${TABLE}."PROPERTY_EMAIL" ;;
     group_label: "contact Info"
 
   }
-
-  dimension_group: property_engagements_last_meeting_booked {
-    type: time
-    timeframes: [
-      raw,
-      time,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    sql: ${TABLE}."PROPERTY_ENGAGEMENTS_LAST_MEETING_BOOKED" ;;
-  }
-
-  dimension: property_engagements_last_meeting_booked_campaign {
-    type: string
-    sql: ${TABLE}."PROPERTY_ENGAGEMENTS_LAST_MEETING_BOOKED_CAMPAIGN" ;;
-  }
-
-  dimension: property_engagements_last_meeting_booked_medium {
-    type: string
-    sql: ${TABLE}."PROPERTY_ENGAGEMENTS_LAST_MEETING_BOOKED_MEDIUM" ;;
-  }
-
-  dimension: property_engagements_last_meeting_booked_source {
-    type: string
-    sql: ${TABLE}."PROPERTY_ENGAGEMENTS_LAST_MEETING_BOOKED_SOURCE" ;;
-  }
-
-
 
   dimension_group: property_first_deal_created {
     type: time

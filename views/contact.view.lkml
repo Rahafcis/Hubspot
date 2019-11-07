@@ -54,6 +54,7 @@ view: contact {
       year
     ]
     sql: ${TABLE}."PROPERTY_FIRST_DEAL_CREATED_DATE" ;;
+    hidden: yes
   }
 
   dimension: property_firstname {

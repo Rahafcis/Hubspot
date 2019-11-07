@@ -279,6 +279,7 @@ view: contact {
       year
     ]
     sql: ${TABLE}."PROPERTY_LASTMODIFIEDDATE" ;;
+    hidden: yes
   }
 
   dimension: property_lastname {
@@ -290,6 +291,7 @@ view: contact {
   dimension: property_lifecyclestage {
     type: string
     sql: ${TABLE}."PROPERTY_LIFECYCLESTAGE" ;;
+    hidden: yes
   }
 
   dimension: property_linkedinbio {

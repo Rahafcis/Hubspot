@@ -164,6 +164,7 @@ view: contact {
       year
     ]
     sql: ${TABLE}."PROPERTY_HS_SALES_EMAIL_LAST_CLICKED" ;;
+    hidden: yes
   }
 
 

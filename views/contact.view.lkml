@@ -71,15 +71,7 @@ view: contact {
     sql: ${TABLE}."PROPERTY_ENGAGEMENTS_LAST_MEETING_BOOKED_SOURCE" ;;
   }
 
-  dimension: property_fax {
-    type: string
-    sql: ${TABLE}."PROPERTY_FAX" ;;
-  }
 
-  dimension: property_field_of_study {
-    type: string
-    sql: ${TABLE}."PROPERTY_FIELD_OF_STUDY" ;;
-  }
 
   dimension_group: property_first_deal_created {
     type: time

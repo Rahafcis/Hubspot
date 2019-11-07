@@ -19,12 +19,14 @@ view: deal_company {
     type: number
     # hidden: yes
     sql: ${TABLE}."COMPANY_ID" ;;
+    hidden: yes
   }
 
   dimension: deal_id {
     type: number
     # hidden: yes
     sql: ${TABLE}."DEAL_ID" ;;
+    hidden: yes
   }
 
   measure: count {

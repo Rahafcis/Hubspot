@@ -20,6 +20,7 @@ view: contact_property_history {
     primary_key: yes
     # hidden: yes
     sql: ${TABLE}."CONTACT_ID" ;;
+    hidden: yes
   }
 
   dimension: name {
@@ -35,6 +36,7 @@ view: contact_property_history {
   dimension: source_id {
     type: string
     sql: ${TABLE}."SOURCE_ID" ;;
+    hidden: yes
   }
 
   dimension_group: timestamp {

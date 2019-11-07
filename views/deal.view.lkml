@@ -25,11 +25,13 @@ view: deal {
   dimension: deal_pipeline_id {
     type: string
     sql: ${TABLE}."DEAL_PIPELINE_ID" ;;
+    hidden: yes
   }
 
   dimension: deal_pipeline_stage_id {
     type: string
     sql: ${TABLE}."DEAL_PIPELINE_STAGE_ID" ;;
+    hidden: yes
   }
 
   dimension: is_deleted {
@@ -119,6 +121,7 @@ view: deal {
   dimension: property_hs_analytics_source {
     type: string
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_SOURCE" ;;
+    hidden: yes
   }
 
   dimension: property_hs_analytics_source_data_1 {
@@ -229,6 +232,7 @@ view: deal {
       year
     ]
     sql: ${TABLE}."PROPERTY_NOTES_LAST_CONTACTED" ;;
+    hidden: yes
   }
 
   dimension_group: property_notes_last_updated {
@@ -243,16 +247,19 @@ view: deal {
       year
     ]
     sql: ${TABLE}."PROPERTY_NOTES_LAST_UPDATED" ;;
+    hidden: yes
   }
 
   dimension: property_num_contacted_notes {
     type: number
     sql: ${TABLE}."PROPERTY_NUM_CONTACTED_NOTES" ;;
+    hidden: yes
   }
 
   dimension: property_num_notes {
     type: number
     sql: ${TABLE}."PROPERTY_NUM_NOTES" ;;
+    hidden: yes
   }
 
   measure: count {

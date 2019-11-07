@@ -38,8 +38,18 @@ explore: deal {
 }
 
 
-explore: engagement {}
+explore: engagement {
 
-explore: engagement_company {}
+  join: engagement_company {
+    type: left_outer
+    relationship: many_to_many
+    sql_on: ${engagement.id}=${engagement_company.engagement_id} ;;
 
-explore: engagement_task {}
+  }
+
+  join: engagement_task {
+    type: left_outer
+    relationship: many_to_many
+    sql_on: ${engagement.id}=${engagement_task.engagement_id} ;;
+  }
+}

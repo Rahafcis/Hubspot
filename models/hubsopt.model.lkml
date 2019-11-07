@@ -11,7 +11,14 @@ datagroup: hubsopt_default_datagroup {
 
 
 
-explore: company {}
+explore: company {
+  join: company_property_history {
+    type: left_outer
+    relationship: many_to_many
+    sql_on: ${company.id}=${company_property_history.company_id} ;;
+
+  }
+}
 
 explore: contact {
 

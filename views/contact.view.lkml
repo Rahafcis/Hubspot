@@ -121,16 +121,6 @@ view: contact {
     hidden: yes
   }
 
-  dimension: property_hs_feedback_last_nps_follow_up {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_FEEDBACK_LAST_NPS_FOLLOW_UP" ;;
-  }
-
-  dimension: property_hs_feedback_last_nps_rating {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_FEEDBACK_LAST_NPS_RATING" ;;
-  }
-
   dimension_group: property_hs_lifecyclestage_customer {
     type: time
     timeframes: [

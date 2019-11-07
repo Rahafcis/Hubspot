@@ -118,6 +118,7 @@ view: contact {
   dimension: property_hs_facebookid {
     type: string
     sql: ${TABLE}."PROPERTY_HS_FACEBOOKID" ;;
+    hidden: yes
   }
 
   dimension: property_hs_feedback_last_nps_follow_up {
@@ -128,16 +129,6 @@ view: contact {
   dimension: property_hs_feedback_last_nps_rating {
     type: string
     sql: ${TABLE}."PROPERTY_HS_FEEDBACK_LAST_NPS_RATING" ;;
-  }
-
-  dimension: property_hs_google_click_id {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_GOOGLE_CLICK_ID" ;;
-  }
-
-  dimension: property_hs_googleplusid {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_GOOGLEPLUSID" ;;
   }
 
   dimension_group: property_hs_lifecyclestage_customer {
@@ -152,6 +143,7 @@ view: contact {
       year
     ]
     sql: ${TABLE}."PROPERTY_HS_LIFECYCLESTAGE_CUSTOMER_DATE" ;;
+    hidden: yes
   }
 
   dimension_group: property_hs_lifecyclestage_evangelist {
@@ -166,6 +158,7 @@ view: contact {
       year
     ]
     sql: ${TABLE}."PROPERTY_HS_LIFECYCLESTAGE_EVANGELIST_DATE" ;;
+    hidden: yes
   }
 
   dimension_group: property_hs_lifecyclestage_lead {
@@ -194,6 +187,7 @@ view: contact {
       year
     ]
     sql: ${TABLE}."PROPERTY_HS_LIFECYCLESTAGE_MARKETINGQUALIFIEDLEAD_DATE" ;;
+    hidden: yes
   }
 
   dimension_group: property_hs_lifecyclestage_opportunity {
@@ -250,26 +244,7 @@ view: contact {
       year
     ]
     sql: ${TABLE}."PROPERTY_HS_LIFECYCLESTAGE_SUBSCRIBER_DATE" ;;
-  }
-
-  dimension: property_hs_linkedinid {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_LINKEDINID" ;;
-  }
-
-  dimension: property_hs_persona {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_PERSONA" ;;
-  }
-
-  dimension: property_hs_predictivecontactscorebucket {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_PREDICTIVECONTACTSCOREBUCKET" ;;
-  }
-
-  dimension: property_hs_predictivescoringtier {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_PREDICTIVESCORINGTIER" ;;
+    hidden: yes
   }
 
   dimension_group: property_hs_sales_email_last_clicked {

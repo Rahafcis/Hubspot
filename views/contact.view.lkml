@@ -82,6 +82,7 @@ view: contact {
       year
     ]
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_FIRST_TIMESTAMP" ;;
+    hidden: yes
   }
 
 
@@ -93,47 +94,21 @@ view: contact {
   dimension: property_hs_analytics_source {
     type: string
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_SOURCE" ;;
+    hidden: yes
   }
 
   dimension: property_hs_analytics_source_data_1 {
     type: string
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_SOURCE_DATA_1" ;;
+    hidden: yes
   }
 
   dimension: property_hs_analytics_source_data_2 {
     type: string
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_SOURCE_DATA_2" ;;
+    hidden: yes
   }
 
-  dimension: property_hs_avatar_filemanager_key {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_AVATAR_FILEMANAGER_KEY" ;;
-  }
-
-  dimension: property_hs_buying_role {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_BUYING_ROLE" ;;
-  }
-
-  dimension: property_hs_content_membership_notes {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_CONTENT_MEMBERSHIP_NOTES" ;;
-  }
-
-  dimension: property_hs_content_membership_registration_domain_sent_to {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_CONTENT_MEMBERSHIP_REGISTRATION_DOMAIN_SENT_TO" ;;
-  }
-
-  dimension: property_hs_content_membership_status {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_CONTENT_MEMBERSHIP_STATUS" ;;
-  }
-
-  dimension: property_hs_conversations_visitor_email {
-    type: string
-    sql: ${TABLE}."PROPERTY_HS_CONVERSATIONS_VISITOR_EMAIL" ;;
-  }
 
   dimension: property_hs_email_last_email_name {
     type: string

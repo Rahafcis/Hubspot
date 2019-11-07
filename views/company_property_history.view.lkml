@@ -13,6 +13,7 @@ view: company_property_history {
       year
     ]
     sql: ${TABLE}."_FIVETRAN_SYNCED" ;;
+    hidden: yes
   }
 
   dimension: company_id {

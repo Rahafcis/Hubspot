@@ -340,34 +340,22 @@ view: contact {
     sql: ${TABLE}."PROPERTY_NOTES_NEXT_ACTIVITY_DATE" ;;
   }
 
-  dimension: property_num_associated_deals {
-    type: number
-    sql: ${TABLE}."PROPERTY_NUM_ASSOCIATED_DEALS" ;;
-  }
-
-  dimension: property_num_contacted_notes {
-    type: number
-    sql: ${TABLE}."PROPERTY_NUM_CONTACTED_NOTES" ;;
-  }
-
-  dimension: property_num_notes {
-    type: number
-    sql: ${TABLE}."PROPERTY_NUM_NOTES" ;;
-  }
-
   dimension: property_numemployees {
     type: string
     sql: ${TABLE}."PROPERTY_NUMEMPLOYEES" ;;
+    hidden: yes
   }
 
   dimension: property_owneremail {
     type: string
     sql: ${TABLE}."PROPERTY_OWNEREMAIL" ;;
+    hidden: yes
   }
 
   dimension: property_ownername {
     type: string
     sql: ${TABLE}."PROPERTY_OWNERNAME" ;;
+    hidden: yes
   }
 
   dimension: property_phone {
@@ -398,6 +386,7 @@ view: contact {
       year
     ]
     sql: ${TABLE}."PROPERTY_RECENT_DEAL_CLOSE_DATE" ;;
+    hidden: yes
   }
 
 

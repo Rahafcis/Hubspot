@@ -37,9 +37,6 @@ explore: deal {
   }
 }
 
-explore: deal_company {}
-
-explore: deal_contact {}
 
 explore: engagement {}
 

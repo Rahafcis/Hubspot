@@ -22,7 +22,7 @@ explore: company {
   join: contact {
     type: left_outer
     relationship: many_to_many
-    sql_on: ${company.property_createdate_date}=${contact.property_createdate_date} ;;
+    sql_on: ${company.id}=${contact.property_associatedcompanyid} ;;
   }
 
 }

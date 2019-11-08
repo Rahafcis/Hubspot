@@ -115,6 +115,7 @@ view: contact {
     type: string
     sql: ${TABLE}."PROPERTY_EMAIL" ;;
     group_label: "Contact Info"
+    label: "Contact_Email"
   }
 
   dimension_group: property_engagements_last_meeting_booked {
@@ -174,6 +175,7 @@ view: contact {
     type: string
     sql: ${TABLE}."PROPERTY_FIRSTNAME" ;;
     group_label: "Contact Info"
+    label: "Contact_firstname"
   }
 
   dimension: property_followercount {
@@ -667,6 +669,7 @@ view: contact {
     type: string
     sql: ${TABLE}."PROPERTY_JOBTITLE" ;;
     group_label: "Contact Info"
+    label: "JOBTITLE"
   }
 
   dimension: property_kloutscoregeneral {
@@ -692,6 +695,7 @@ view: contact {
     type: string
     sql: ${TABLE}."PROPERTY_LASTNAME" ;;
     group_label: "Contact Info"
+    label: "Contact_lastname "
   }
 
   dimension: property_lifecyclestage {

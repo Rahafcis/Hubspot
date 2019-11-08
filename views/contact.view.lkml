@@ -53,6 +53,12 @@ view: contact {
     sql: ${TABLE}."PROPERTY_CITY" ;;
   }
 
+  dimension: Contact_Name {
+    description: "The first and last name of the user"
+    sql: CONCAT(${TABLE}.property_firstname,' ', ${TABLE}.property_lastname) ;;
+  }
+
+
   dimension_group: property_closedate {
     type: time
     timeframes: [

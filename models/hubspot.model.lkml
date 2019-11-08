@@ -22,7 +22,7 @@ explore: company {
   join: contact {
     type: left_outer
     relationship: many_to_many
-    sql_on: ${company.property_phone}=${contact.property_phone} ;;
+    sql_on: ${company.property_hubspot_owner_id}=${contact.property_hubspot_owner_id} ;;
   }
 
 }

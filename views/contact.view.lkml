@@ -607,7 +607,7 @@ view: contact {
   }
 
   dimension: property_hubspot_owner_id {
-    type: string
+    type: number
     sql: ${TABLE}."PROPERTY_HUBSPOT_OWNER_ID" ;;
   }
 

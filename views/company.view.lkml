@@ -250,7 +250,7 @@ view: company {
   }
 
   dimension: property_hubspot_owner_id {
-    type: number
+    type: string
     sql: ${TABLE}."PROPERTY_HUBSPOT_OWNER_ID" ;;
   }
 

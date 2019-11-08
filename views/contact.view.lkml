@@ -195,7 +195,7 @@ view: contact {
   }
 
   dimension: property_hs_all_owner_ids {
-    type: string
+    type: number
     sql: ${TABLE}."PROPERTY_HS_ALL_OWNER_IDS" ;;
   }
 
@@ -607,7 +607,7 @@ view: contact {
   }
 
   dimension: property_hubspot_owner_id {
-    type: number
+    type: string
     sql: ${TABLE}."PROPERTY_HUBSPOT_OWNER_ID" ;;
   }
 

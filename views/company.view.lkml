@@ -283,6 +283,7 @@
     type: string
     sql: ${TABLE}."PROPERTY_NAME" ;;
     group_label: "Property_Info"
+    label: "Company_name"
   }
 
   dimension_group: property_notes_last_contacted {

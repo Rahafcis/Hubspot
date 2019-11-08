@@ -114,6 +114,7 @@ view: contact {
   dimension: property_email {
     type: string
     sql: ${TABLE}."PROPERTY_EMAIL" ;;
+    group_label: "Contact Info"
   }
 
   dimension_group: property_engagements_last_meeting_booked {
@@ -172,6 +173,7 @@ view: contact {
   dimension: property_firstname {
     type: string
     sql: ${TABLE}."PROPERTY_FIRSTNAME" ;;
+    group_label: "Contact Info"
   }
 
   dimension: property_followercount {
@@ -664,6 +666,7 @@ view: contact {
   dimension: property_jobtitle {
     type: string
     sql: ${TABLE}."PROPERTY_JOBTITLE" ;;
+    group_label: "Contact Info"
   }
 
   dimension: property_kloutscoregeneral {
@@ -688,6 +691,7 @@ view: contact {
   dimension: property_lastname {
     type: string
     sql: ${TABLE}."PROPERTY_LASTNAME" ;;
+    group_label: "Contact Info"
   }
 
   dimension: property_lifecyclestage {
@@ -723,6 +727,7 @@ view: contact {
   dimension: property_mobilephone {
     type: string
     sql: ${TABLE}."PROPERTY_MOBILEPHONE" ;;
+    group_label: "Contact Info"
   }
 
   dimension_group: property_notes_last_contacted {
@@ -780,6 +785,7 @@ view: contact {
   dimension: property_num_notes {
     type: number
     sql: ${TABLE}."PROPERTY_NUM_NOTES" ;;
+
   }
 
   dimension: property_numemployees {
@@ -800,6 +806,7 @@ view: contact {
   dimension: property_phone {
     type: string
     sql: ${TABLE}."PROPERTY_PHONE" ;;
+    group_label: "Contact Info"
   }
 
   dimension: property_photo {

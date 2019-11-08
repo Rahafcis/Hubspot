@@ -1,4 +1,4 @@
-view: company {
+  view: company {
   sql_table_name: HUBSPOT.COMPANY ;;
   drill_fields: [id]
 

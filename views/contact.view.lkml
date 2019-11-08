@@ -56,6 +56,7 @@ view: contact {
   dimension: Contact_Name {
     description: "The first and last name of the user"
     sql: CONCAT(${TABLE}.property_firstname,' ', ${TABLE}.property_lastname) ;;
+    label: "Contact_name"
   }
 
 

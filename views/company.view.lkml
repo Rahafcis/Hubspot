@@ -287,7 +287,7 @@
 
       action: {
         label: "Send email report"
-        url: "https://hooks.zapier.com/hooks/catch/5919737/o41x2sc/"
+        url: "https://hooks.zapier.com/hooks/catch/5919737/o41xnng/"
         icon_url: "https://sendgrid.com/favicon.ico"
 
         form_param: {

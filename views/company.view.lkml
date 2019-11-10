@@ -315,7 +315,7 @@
           "Hello,
 
           Hello, please see the informations that took place in {{ companys.property_name }}:
-          {{ company.PROPERTY_CITY}}:{{ company.count._value }}"
+          {{ company.property_name}}:{{ company.count._value }}"
         }
       }
 

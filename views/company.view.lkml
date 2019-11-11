@@ -288,7 +288,7 @@
     link: {
       label: "LinkedIn"
       url: "https://www.linkedin.com/search/results/people/?"
-      icon_url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Ffree-icon%2Flinkedin_174857&psig=AOvVaw1inIY0qqzCdYmNq02qxFhG&ust=1573563763533000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDPgf2b4uUCFQAAAAAdAAAAABAD"
+      icon_url: "https://image.flaticon.com/icons/svg/174/174857.svg"
     }
   }
 

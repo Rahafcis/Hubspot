@@ -58,6 +58,12 @@ view: contact {
     description: "The first and last name of the user"
     sql: CONCAT(${TABLE}.property_firstname,' ', ${TABLE}.property_lastname) ;;
     label: "Contact"
+    link: {
+      label: "LinkedIn"
+      url: "https://www.linkedin.com/search/results/people/?q={{ Name }}"
+      icon_url: "https://image.flaticon.com/icons/svg/174/174857.svg"
+    }
+
     action: {
       label: "Send email report"
       url: "https://hooks.zapier.com/hooks/catch/5919737/o41xnng/"

@@ -61,7 +61,7 @@ view: contact {
 
     link: {
       label: "LinkedIn"
-      url: "https://www.linkedin.com/search/results/people/?q={{ value }}"
+      url: "http://www.google.com/search?q=linkedin.com?+{{ value | encode_uri }}"
       icon_url: "https://image.flaticon.com/icons/svg/174/174857.svg"
     }
 

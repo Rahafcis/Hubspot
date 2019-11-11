@@ -58,6 +58,7 @@ view: contact {
     description: "The first and last name of the user"
     sql: CONCAT(${TABLE}.property_firstname,' ', ${TABLE}.property_lastname) ;;
     label: "Contact"
+
     link: {
       label: "LinkedIn"
       url: "https://www.linkedin.com/search/results/people/?q={{ Name }}"

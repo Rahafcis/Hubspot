@@ -286,7 +286,7 @@
     label: "Company Name"
 
     link: {
-      label: "LinkedIn"
+      label: "Linkedin"
       url: "http://www.google.com/search?q=linkedin.com+{{ value | encode_uri }}"
       icon_url: "https://image.flaticon.com/icons/svg/174/174857.svg"
     }

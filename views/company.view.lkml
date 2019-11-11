@@ -277,8 +277,12 @@
       label: "Linkedin"
       url: "{{property_linkedin_company_page}}"
       icon_url: "https://image.flaticon.com/icons/svg/174/174857.svg"
+
+
     }
   }
+
+
 
   dimension: property_linkedinbio {
     type: string

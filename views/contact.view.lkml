@@ -94,8 +94,8 @@ view: contact {
         default:
         "Hello,
 
-        Hello, please see the informations that took place in {{ company.property_name }}:
-        {{ company.PROPERTY_CITY}}:{{ company.count._value }}"
+        Hello, please see the informations that took place in {{ contact.Contact_Name }}:
+        {{ contact.Contact_Name}}:{{ contact.count._value }}"
       }
     }
   }
@@ -164,7 +164,41 @@ view: contact {
     sql: ${TABLE}."PROPERTY_EMAIL" ;;
     group_label: "Contact Info"
     label: "Email"
+    action: {
+      label: "Send email"
+      url: "https://hooks.zapier.com/hooks/catch/5919737/o41xnng/"
+      icon_url: "https://sendgrid.com/favicon.ico"
+
+      form_param: {
+        name: "To"
+        type: string
+        required: yes
+        default:
+        "email"
+      }
+
+      form_param: {
+        name: "Subject"
+        type: string
+        required: yes
+        default:
+        "Informe"
+      }
+
+
+      form_param: {
+        name: "Body"
+        type: textarea
+        required: yes
+        default:
+        "Hello,
+
+        Hello, please see the informations that took place in {{ contact.property_email }}:
+        {{ contact.property_email}}:{{ contact.count._value }}"
+      }
+    }
   }
+
 
   dimension_group: property_engagements_last_meeting_booked {
     type: time

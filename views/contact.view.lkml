@@ -66,7 +66,7 @@ view: contact {
     }
 
     action: {
-      label: "Send email report"
+      label: "Send email"
       url: "https://hooks.zapier.com/hooks/catch/5919737/o41xnng/"
       icon_url: "https://sendgrid.com/favicon.ico"
 

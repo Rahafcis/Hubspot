@@ -272,6 +272,7 @@
   dimension: property_linkedin_company_page {
     type: string
     sql: ${TABLE}."PROPERTY_LINKEDIN_COMPANY_PAGE" ;;
+    label: "linkedin company page"
   }
 
   dimension: property_linkedinbio {

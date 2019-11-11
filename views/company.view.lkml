@@ -273,6 +273,10 @@
     type: string
     sql: ${TABLE}."PROPERTY_LINKEDIN_COMPANY_PAGE" ;;
     label: "linkedin company page"
+    link: {
+      label: "Linkedin"
+      url: "property_linkedin_company_page"
+    }
   }
 
   dimension: property_linkedinbio {

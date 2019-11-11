@@ -287,7 +287,7 @@
 
     link: {
       label: "LinkedIn"
-      url: "https://www.linkedin.com/search/results/people/?"
+      url: "https://www.linkedin.com/search/results/people/?q={{ value }}"
       icon_url: "https://image.flaticon.com/icons/svg/174/174857.svg"
     }
   }

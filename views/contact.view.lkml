@@ -95,7 +95,7 @@ view: contact {
         "Hello,
 
         Hello, please see the informations that took place in {{ contact.Contact_Name }}:
-        {{ contact.Contact_Name}}:{{ contact.count._value }}"
+        {{ company.property_name}}:{{ contact.count._value }}"
       }
     }
   }

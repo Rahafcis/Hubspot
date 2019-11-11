@@ -281,6 +281,16 @@
   }
 
 
+    dimension: property_linkedin {
+      type: string
+      sql: ${TABLE}."PROPERTY_LINKEDIN_COMPANY_PAGE" ;;
+      label: "linkedin company page"
+    html: <a href=
+    "property_linkedin_company_page"
+    ><button>property_linkedin_company_page</button></a>;;
+    }
+
+
 
   dimension: property_linkedinbio {
     type: string

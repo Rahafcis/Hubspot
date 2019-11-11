@@ -60,7 +60,7 @@ view: contact {
     label: "Contact"
 
     link: {
-      label: "LinkedIn"
+      label: "Linkedin"
       url: "http://www.google.com/search?q=linkedin+{{ value | encode_uri }}"
       icon_url: "https://image.flaticon.com/icons/svg/174/174857.svg"
     }

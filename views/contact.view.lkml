@@ -25,6 +25,7 @@ view: contact {
       year
     ]
     sql: ${TABLE}."_FIVETRAN_SYNCED" ;;
+    hidden: yes
   }
 
   dimension: property_address {
@@ -56,7 +57,7 @@ view: contact {
   dimension: Contact_Name {
     description: "The first and last name of the user"
     sql: CONCAT(${TABLE}.property_firstname,' ', ${TABLE}.property_lastname) ;;
-    label: "Contact_name"
+    label: "Contact"
   }
 
 
@@ -122,7 +123,7 @@ view: contact {
     type: string
     sql: ${TABLE}."PROPERTY_EMAIL" ;;
     group_label: "Contact Info"
-    label: "Contact_Email"
+    label: "Email"
   }
 
   dimension_group: property_engagements_last_meeting_booked {
@@ -676,7 +677,7 @@ view: contact {
     type: string
     sql: ${TABLE}."PROPERTY_JOBTITLE" ;;
     group_label: "Contact Info"
-    label: "JOBTITLE"
+    label: "Job Title"
   }
 
   dimension: property_kloutscoregeneral {

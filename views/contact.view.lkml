@@ -75,7 +75,7 @@ view: contact {
         type: string
         required: yes
         default:
-        "rahaf@cisconsulting.io"
+        "email"
       }
 
       form_param: {

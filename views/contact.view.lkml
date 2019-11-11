@@ -58,6 +58,39 @@ view: contact {
     description: "The first and last name of the user"
     sql: CONCAT(${TABLE}.property_firstname,' ', ${TABLE}.property_lastname) ;;
     label: "Contact"
+    action: {
+      label: "Send email report"
+      url: "https://hooks.zapier.com/hooks/catch/5919737/o41xnng/"
+      icon_url: "https://sendgrid.com/favicon.ico"
+
+      form_param: {
+        name: "To"
+        type: string
+        required: yes
+        default:
+        "rahaf@cisconsulting.io"
+      }
+
+      form_param: {
+        name: "Subject"
+        type: string
+        required: yes
+        default:
+        "Informe"
+      }
+
+
+      form_param: {
+        name: "Body"
+        type: textarea
+        required: yes
+        default:
+        "Hello,
+
+        Hello, please see the informations that took place in {{ company.property_name }}:
+        {{ company.PROPERTY_CITY}}:{{ company.count._value }}"
+      }
+    }
   }
 
 

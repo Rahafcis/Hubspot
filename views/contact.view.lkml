@@ -75,15 +75,15 @@ view: contact {
         type: string
         required: yes
         default:
-        "email"
+        "{{property_email}}"
       }
 
       form_param: {
         name: "Subject"
         type: string
         required: yes
-        default:
-        "Informe"
+
+
       }
 
 
@@ -91,11 +91,7 @@ view: contact {
         name: "Body"
         type: textarea
         required: yes
-        default:
-        "Hello,
 
-        Hello, please see the informations that took place in {{ contact.Contact_Name }}:
-        {{ contact.PROPERTY_EMAIL}}:{{ contact.count._value }}"
       }
     }
   }
@@ -174,15 +170,14 @@ view: contact {
         type: string
         required: yes
         default:
-        "email"
+        "{{property_email}}"
       }
 
       form_param: {
         name: "Subject"
         type: string
         required: yes
-        default:
-        "Informe"
+
       }
 
 
@@ -190,11 +185,7 @@ view: contact {
         name: "Body"
         type: textarea
         required: yes
-        default:
-        "Hello,
 
-        Hello, please see the informations that took place in {{ contact.property_email }}:
-        {{ contact.Contact_Name}}:{{ contact.count._value }}"
       }
     }
   }

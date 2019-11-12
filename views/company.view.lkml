@@ -284,7 +284,7 @@
     dimension: property_linkedin {
       type: string
       sql: ${TABLE}."PROPERTY_LINKEDIN_COMPANY_PAGE" ;;
-      label: "linkedin company page"
+      label: "Linkedin Company Page"
     html: <a href=
     "{{property_linkedin_company_page}}"style="font-size:90%; color: purple"
     >{{property_name}}</a>;;

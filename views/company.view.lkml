@@ -286,8 +286,8 @@
       sql: ${TABLE}."PROPERTY_LINKEDIN_COMPANY_PAGE" ;;
       label: "linkedin company page"
     html: <a href=
-    "{{property_linkedin_company_page}}"style="font-size:90%; color: green"
-    >linkedin</a>;;
+    "{{property_linkedin_company_page}}"style="font-size:90%; color: purple"
+    >{{property_name}}</a>;;
     hidden: yes
     }
 

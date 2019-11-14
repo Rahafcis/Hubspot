@@ -42,6 +42,12 @@
     sql: ${TABLE}."PROPERTY_CITY" ;;
   }
 
+    dimension: country {
+      type: string
+      map_layer_name: countries
+      sql: ${TABLE}.property_country;;
+    }
+
   dimension_group: property_closedate {
     type: time
     timeframes: [

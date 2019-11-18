@@ -318,6 +318,8 @@
     }
   }
 
+
+
   dimension_group: property_notes_last_contacted {
     type: time
     timeframes: [

@@ -6,6 +6,13 @@ view: contact {
     primary_key: yes
     type: number
     sql: ${TABLE}."ID" ;;
+
+
+  link: {
+    label: "View Contact in Hubspot"
+    url: "https://app.hubspot.com/contacts/3068849/contacts/{{ value }}/"
+    icon_url: "http://app.hubspot.com/favicon.ico"}
+
   }
 
   dimension: _fivetran_deleted {
@@ -63,6 +70,12 @@ view: contact {
       label: "Linkedin"
       url: "https://www.linkedin.com/search/results/people/?authorCompany=%5B%5D&authorIndustry=%5B%5D&contactInterest=%5B%5D&facetCity=%5B%5D&facetCompany=%5B%5D&facetConnectionOf=%5B%5D&facetCurrentCompany=%5B%5D&facetCurrentFunction=%5B%5D&facetGeoRegion=%5B%5D&facetGroup=%5B%5D&facetGuides=%5B%5D&facetIndustry=%5B%5D&facetNetwork=%5B%5D&facetNonprofitInterest=%5B%5D&facetPastCompany=%5B%5D&facetProfessionalEvent=%5B%5D&facetProfileLanguage=%5B%5D&facetRegion=%5B%5D&facetSchool=%5B%5D&facetSeniority=%5B%5D&facetServiceCategory=%5B%5D&facetState=%5B%5D&groups=%5B%5D&keywords={{ Contact_Name }}&origin=GLOBAL_SEARCH_HEADER&page=1&refresh=false&skillExplicit=%5B%5D&topic=%5B%5D"
       icon_url: "https://image.flaticon.com/icons/svg/174/174857.svg"
+    }
+
+    link: {
+      label: "View Contact in Hubspot"
+      url: "https://app.hubspot.com/contacts/3068849/contacts/list/view/all/?query={{Contact_Name}}"
+      icon_url: "http://app.hubspot.com/favicon.ico"
     }
 
     action: {

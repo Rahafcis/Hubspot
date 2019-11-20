@@ -6,19 +6,30 @@ view: deal {
     primary_key: yes
     type: number
     sql: ${TABLE}."DEAL_ID" ;;
+  }
 
+  dimension_group: _fivetran_synced {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}."_FIVETRAN_SYNCED" ;;
   }
 
   dimension: deal_pipeline_id {
     type: string
     sql: ${TABLE}."DEAL_PIPELINE_ID" ;;
-    hidden: yes
   }
 
   dimension: deal_pipeline_stage_id {
     type: string
     sql: ${TABLE}."DEAL_PIPELINE_STAGE_ID" ;;
-    hidden: yes
   }
 
   dimension: is_deleted {
@@ -99,6 +110,11 @@ view: deal {
     sql: ${TABLE}."PROPERTY_DEALTYPE" ;;
   }
 
+  dimension: property_hours {
+    type: number
+    sql: ${TABLE}."PROPERTY_HOURS" ;;
+  }
+
   dimension: property_hs_all_owner_ids {
     type: number
     value_format_name: id
@@ -108,7 +124,6 @@ view: deal {
   dimension: property_hs_analytics_source {
     type: string
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_SOURCE" ;;
-    hidden: yes
   }
 
   dimension: property_hs_analytics_source_data_1 {
@@ -219,7 +234,6 @@ view: deal {
       year
     ]
     sql: ${TABLE}."PROPERTY_NOTES_LAST_CONTACTED" ;;
-    hidden: yes
   }
 
   dimension_group: property_notes_last_updated {
@@ -234,23 +248,20 @@ view: deal {
       year
     ]
     sql: ${TABLE}."PROPERTY_NOTES_LAST_UPDATED" ;;
-    hidden: yes
   }
 
   dimension: property_num_contacted_notes {
     type: number
     sql: ${TABLE}."PROPERTY_NUM_CONTACTED_NOTES" ;;
-    hidden: yes
   }
 
   dimension: property_num_notes {
     type: number
     sql: ${TABLE}."PROPERTY_NUM_NOTES" ;;
-    hidden: yes
   }
 
   measure: count {
     type: count
-    drill_fields: [deal_id, property_dealname, deal_company.count, deal_contact.count]
+    drill_fields: [deal_id, property_dealname]
   }
 }

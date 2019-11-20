@@ -6,7 +6,7 @@ view: deal {
     primary_key: yes
     type: number
     sql: ${TABLE}."DEAL_ID" ;;
-    hidden: yes
+
   }
 
   dimension: deal_pipeline_id {

@@ -18,6 +18,7 @@ view: deal_property_history {
   dimension: deal_id {
     type: number
     sql: ${TABLE}."DEAL_ID" ;;
+    primary_key: yes
   }
 
   dimension: name {

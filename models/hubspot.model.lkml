@@ -39,13 +39,8 @@ explore: contact {
 
 
 explore: deal {
-  join: deal_company {
-    relationship: many_to_many
-    sql_on: ${deal.deal_id}=${deal_company.deal_id} ;;
-  }
-
   join: deal_property_history{
-    relationship: many_to_many
+    relationship: one_to_many
     sql_on: ${deal.deal_id}=${deal_property_history.deal_id} ;;
   }
 }

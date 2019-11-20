@@ -6,13 +6,7 @@ view: contact {
     primary_key: yes
     type: number
     sql: ${TABLE}."ID" ;;
-
-  link: {
-    label: "View Contact in Hubspot"
-    url: "https://app.hubspot.com/contacts/3068849/contacts/{{ value }}/"
-    icon_url: "http://app.hubspot.com/favicon.ico"}
-
-  }
+    }
 
   dimension: _fivetran_deleted {
     type: yesno

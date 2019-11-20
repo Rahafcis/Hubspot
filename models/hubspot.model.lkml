@@ -44,9 +44,9 @@ explore: deal {
     sql_on: ${deal.deal_id}=${deal_company.deal_id} ;;
   }
 
-  join: deal_contact {
-    relationship: many_to_many
-    sql_on: ${deal.deal_id}=${deal_contact.deal_id} ;;
+  join: deal_property_history{
+    relationship: one_to_one
+    sql_on: ${deal.deal_id}=${deal_property_history.deal_id} ;;
   }
 }
 

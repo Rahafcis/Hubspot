@@ -318,6 +318,12 @@
     }
 
     link: {
+      label: "View Company in Hubspot"
+      url: "https://app.hubspot.com/contacts/3068849/company/{{ id._value }}/"
+      icon_url: "http://app.hubspot.com/favicon.ico"
+    }
+
+    link: {
     label: "Search Company On Linkedin"
     url:"https://www.linkedin.com/search/results/companies/?authorCompany=%5B%5D&authorIndustry=%5B%5D&contactInterest=%5B%5D&facetCity=%5B%5D&facetCompany=%5B%5D&facetConnectionOf=%5B%5D&facetCurrentCompany=%5B%5D&facetCurrentFunction=%5B%5D&facetGeoRegion=%5B%5D&facetGroup=%5B%5D&facetGuides=%5B%5D&facetIndustry=%5B%5D&facetNetwork=%5B%5D&facetNonprofitInterest=%5B%5D&facetPastCompany=%5B%5D&facetProfessionalEvent=%5B%5D&facetProfileLanguage=%5B%5D&facetRegion=%5B%5D&facetSchool=%5B%5D&facetSeniority=%5B%5D&facetServiceCategory=%5B%5D&facetState=%5B%5D&groups=%5B%5D&keywords={{property_name}}&origin=GLOBAL_SEARCH_HEADER&page=1&refresh=false&skillExplicit=%5B%5D&topic=%5B%5D"
       icon_url: "https://image.flaticon.com/icons/svg/174/174857.svg"

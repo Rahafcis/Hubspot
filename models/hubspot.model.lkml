@@ -45,7 +45,7 @@ explore: deal {
   }
 
   join: deal_property_history{
-    relationship: one_to_many
+    relationship: many_to_many
     sql_on: ${deal.deal_id}=${deal_property_history.deal_id} ;;
   }
 }

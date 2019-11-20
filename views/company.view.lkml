@@ -298,8 +298,6 @@
     hidden: yes
     }
 
-
-
   dimension: property_linkedinbio {
     type: string
     sql: ${TABLE}."PROPERTY_LINKEDINBIO" ;;

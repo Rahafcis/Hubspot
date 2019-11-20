@@ -13,6 +13,7 @@ view: deal_contact {
     type: number
     # hidden: yes
     sql: ${TABLE}."DEAL_ID" ;;
+    primary_key: yes
   }
 
   measure: count {

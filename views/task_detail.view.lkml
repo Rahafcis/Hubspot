@@ -52,6 +52,11 @@ view: task_detail {
     sql: ${TABLE}."DURATION_DECIMAL_" ;;
   }
 
+  measure: Houres_Used{
+    type: sum
+    sql: ${TABLE}."DURATION_DECIMAL_" ;;
+  }
+
   dimension: duration_h_ {
     type: string
     sql: ${TABLE}."DURATION_H_" ;;

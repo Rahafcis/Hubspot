@@ -7,7 +7,6 @@ view: contact {
     type: number
     sql: ${TABLE}."ID" ;;
 
-
   link: {
     label: "View Contact in Hubspot"
     url: "https://app.hubspot.com/contacts/3068849/contacts/{{ value }}/"
@@ -74,7 +73,7 @@ view: contact {
 
     link: {
       label: "View Contact in Hubspot"
-      url: "https://app.hubspot.com/contacts/3068849/contacts/list/view/all/?query={{Contact_Name}}"
+      url: "https://app.hubspot.com/contacts/3068849/contacts/{{ id._value }}/"
       icon_url: "http://app.hubspot.com/favicon.ico"
     }
 

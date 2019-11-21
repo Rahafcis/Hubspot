@@ -54,6 +54,18 @@ view: task_detail {
   dimension: client {
     type: string
     sql: ${TABLE}."CLIENT" ;;
+
+    link: {
+      label: "Client Linkedin Page"
+      url: "{{ company.property_linkedin._value }}"
+      icon_url: "https://image.flaticon.com/icons/svg/174/174857.svg"
+    }
+
+    link: {
+      label: "View Client in Hubspot"
+      url: "https://app.hubspot.com/contacts/3068849/company/{{ company.id._value }}"
+      icon_url: "http://app.hubspot.com/favicon.ico"
+    }
   }
 
   dimension: description {

@@ -115,6 +115,11 @@ view: deal {
     sql: ${TABLE}."PROPERTY_HOURS" ;;
   }
 
+  measure: total_hours {
+    type: sum
+    sql: ${TABLE}."PROPERTY_HOURS" ;;
+  }
+
   dimension: property_hs_all_owner_ids {
     type: number
     value_format_name: id

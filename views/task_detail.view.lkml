@@ -32,6 +32,11 @@ view: task_detail {
     sql: ${TABLE}."AMOUNT_EUR_" ;;
   }
 
+  measure: total_amount {
+    type: sum
+    sql:${TABLE}."AMOUNT_EUR_"  ;;
+  }
+
   dimension: billable {
     type: string
     sql: ${TABLE}."BILLABLE" ;;

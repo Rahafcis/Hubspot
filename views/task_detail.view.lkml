@@ -7,6 +7,11 @@ view: task_detail {
     hidden: yes
   }
 
+ dimension: property_Hours {
+   type: number
+  sql: ${deal.property_hours} ;;
+ }
+
   measure: project_hours {
     type: number
     sql: ${Total_DURATION_DECIMAL}/${deal.property_hours};;

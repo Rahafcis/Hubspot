@@ -16,7 +16,6 @@ explore: company {
     type: left_outer
     relationship: many_to_many
     sql_on: ${company.id}=${company_property_history.company_id} ;;
-
   }
 
   join: contact {
@@ -30,6 +29,10 @@ explore: company {
     sql_on: ${company.property_name}=${task_detail.client} ;;
   }
 
+join: deal {
+  relationship: one_to_many
+  sql_on: ${company.portal_id}=${deal.portal_id} ;;
+}
 }
 
 explore: contact {

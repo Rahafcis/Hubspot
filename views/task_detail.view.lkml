@@ -7,6 +7,12 @@ view: task_detail {
     hidden: yes
   }
 
+  measure: project_hours {
+    type: number
+    sql: ${Total_DURATION_DECIMAL}/${deal.property_hours};;
+    value_format: "0%"
+  }
+
   dimension_group: _fivetran_synced {
     type: time
     timeframes: [

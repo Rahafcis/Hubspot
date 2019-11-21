@@ -30,14 +30,14 @@ view: task_detail {
   dimension: amount_eur_ {
     type: number
     sql: ${TABLE}."AMOUNT_EUR_" ;;
-    value_format_name: eur
+    value_format_name: eur_0
   }
 
 
   measure: total_amount {
     type: sum
     sql:${TABLE}."AMOUNT_EUR_"  ;;
-    value_format_name: eur
+    value_format_name: eur_0
   }
 
   dimension: billable {

@@ -33,7 +33,6 @@ view: task_detail {
     value_format_name: eur_0
   }
 
-
   measure: total_amount {
     type: sum
     sql:${TABLE}."AMOUNT_EUR_"  ;;

@@ -45,6 +45,13 @@ explore: contact {
   }
   }
 
+  explore: task_detail {
+    join: deal {
+      relationship: one_to_one
+      sql_on:${deal.property_dealname}=${task_detail.project}  ;;
+    }
+  }
+
 
 explore: deal {
   join: deal_property_history{

@@ -7,7 +7,7 @@ view: task_detail {
     hidden: yes
   }
 
-  measure: project_hours {
+  measure: perc_hours_consumed {
     type: number
     sql:${task_detail.Total_DURATION_DECIMAL}/${deal.property_hours} ;;
     value_format: "0%"

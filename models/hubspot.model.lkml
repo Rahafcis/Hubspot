@@ -38,13 +38,6 @@ explore: contact {
   }
   }
 
-  explore: task_detail {
-    join: deal {
-      relationship: one_to_one
-      sql_on:${deal.property_dealname}=${task_detail.project}  ;;
-    }
-  }
-
 
 explore: deal {
   join: deal_property_history{
@@ -52,7 +45,7 @@ explore: deal {
     sql_on: ${deal.deal_id}=${deal_property_history.deal_id} ;;
   }
   join: task_detail {
-    relationship: one_to_one
+    relationship: many_to_many
     sql_on:${deal.property_dealname}=${task_detail.project}  ;;
   }
 }

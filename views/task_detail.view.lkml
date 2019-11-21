@@ -110,7 +110,6 @@ view: task_detail {
   dimension: project {
     type: string
     sql: ${TABLE}."PROJECT" ;;
-    primary_key: yes
 
   }
 

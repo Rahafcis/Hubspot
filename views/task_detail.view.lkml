@@ -9,9 +9,10 @@ view: task_detail {
 
   measure: project_hours {
     type: number
-    sql:${task_detail.Total_DURATION_DECIMAL}/${deal.total_hours} ;;
+    sql:${task_detail.Total_DURATION_DECIMAL}/${deal.property_hours} ;;
     value_format: "0%"
   }
+
 
   dimension_group: _fivetran_synced {
     type: time

@@ -52,7 +52,7 @@ view: task_detail {
     sql: ${TABLE}."DURATION_DECIMAL_" ;;
   }
 
-  measure: Houres_Used{
+  measure: Total_DURATION_DECIMAL{
     type: sum
     sql: ${TABLE}."DURATION_DECIMAL_" ;;
   }

@@ -44,14 +44,6 @@ view: task_detail {
     sql: ${TABLE}."BILLABLE" ;;
   }
 
-
-  measure: consumed{
-    type: number
-    value_format_name: percent_2
-    sql: 100 * ${Total_DURATION_DECIMAL} /${deal.property_hours} ;;
-  }
-
-
   dimension: client {
     type: string
     sql: ${TABLE}."CLIENT" ;;

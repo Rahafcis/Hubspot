@@ -24,6 +24,11 @@ explore: company {
     relationship: many_to_many
     sql_on: ${company.id}=${contact.property_associatedcompanyid} ;;
   }
+  join: task_detail {
+    type: left_outer
+    relationship: one_to_one
+    sql_on: ${company.property_name}=${task_detail.client} ;;
+  }
 
 }
 

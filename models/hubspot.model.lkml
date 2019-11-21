@@ -56,20 +56,3 @@ explore: deal {
     sql_on:${deal.property_dealname}=${task_detail.project}  ;;
   }
 }
-
-
-explore: engagement {
-
-  join: engagement_company {
-    type: left_outer
-    relationship: many_to_many
-    sql_on: ${engagement.id}=${engagement_company.engagement_id} ;;
-
-  }
-
-  join: engagement_task {
-    type: left_outer
-    relationship: many_to_many
-    sql_on: ${engagement.id}=${engagement_task.engagement_id} ;;
-  }
-}

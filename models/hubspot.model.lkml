@@ -37,6 +37,13 @@ explore: contact {
   sql_on: ${contact.id}=${contact_property_history.contact_id} ;;
   }
   }
+ explore: task_detail {
+  join: deal {
+    relationship: many_to_many
+    sql_on:${deal.property_dealname}=${task_detail.project}  ;;
+  }
+
+    }
 
 
 explore: deal {

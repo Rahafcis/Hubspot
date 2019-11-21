@@ -9,8 +9,6 @@ datagroup: hubspot_default_datagroup {
 }
 
 
-
-
 explore: company {
   join: company_property_history {
     type: left_outer

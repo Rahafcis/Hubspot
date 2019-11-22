@@ -16,6 +16,12 @@ explore: company {
     sql_on: ${company.id}=${company_property_history.company_id} ;;
   }
 
+  join: task_detail {
+    type: left_outer
+    relationship: one_to_many
+    sql_on: ${company.property_name}=${task_detail.client} ;;
+  }
+
   join: contact {
     type: left_outer
     relationship: many_to_many
@@ -24,7 +30,7 @@ explore: company {
 
 join: deal {
   relationship: one_to_many
-  sql_on: ${company.portal_id}=${deal.portal_id} ;;
+  sql_on: ${company.property_hs_all_owner_ids}=${deal.property_hs_all_owner_ids} ;;
 }
 }
 

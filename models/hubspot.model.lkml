@@ -29,7 +29,7 @@ explore: company {
   }
 
 join: deal {
-  type: inner
+
   relationship: one_to_one
   sql_on: ${company.portal_id}=${deal.portal_id} ;;
 }

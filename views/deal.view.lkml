@@ -104,6 +104,12 @@ view: deal {
     type: string
     sql: ${TABLE}."PROPERTY_DEALNAME" ;;
     label: "Deal"
+
+    link: {
+      label: "View Deal in Hubspot"
+      url: "https://app.hubspot.com/contacts/3068849/deal/{{ deal_id._value}}/"
+      icon_url: "http://app.hubspot.com/favicon.ico"
+    }
   }
 
   dimension: property_dealtype {

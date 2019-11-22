@@ -106,6 +106,16 @@ view: deal {
     sql: ${TABLE}."PROPERTY_DEALNAME" ;;
   }
 
+  dimension: name_space {
+    type: number
+    sql: charindex(' -',${property_dealname}) ;;
+  }
+
+  dimension: name {
+    type: string
+    sql: Left(${property_dealname}, ${name_space}) ;;
+  }
+
   dimension: property_dealtype {
     type: string
     sql: ${TABLE}."PROPERTY_DEALTYPE" ;;

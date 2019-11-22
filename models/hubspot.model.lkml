@@ -33,10 +33,10 @@ explore: company {
     sql_on: ${company.id}=${deal_company.company_id} ;;
   }
 
-join: deal {
-  relationship: many_to_many
-  sql_on: ;;
-}
+  join: deal {
+    relationship: one_to_one
+    sql_on:${deal_company.deal_id}=${deal.deal_id} ;;
+  }
 }
 
 explore: contact {
@@ -57,7 +57,7 @@ explore: deal {
   join: deal_company {
     type: left_outer
     relationship: one_to_one
-    sql_on: ${deal.deal_id}=${deal_company.deal_id}_id} ;;
+    sql_on: ${deal.deal_id}=${deal_company.deal_id} ;;
   }
   join: task_detail {
     relationship: one_to_one

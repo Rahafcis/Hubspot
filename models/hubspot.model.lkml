@@ -31,7 +31,7 @@ explore: company {
 join: deal {
 
   relationship: one_to_one
-  sql_on: ${company.portal_id}=${deal.portal_id} ;;
+  sql_on: ${company.property_name}=${deal.property_dealname} ;;
 }
 }
 

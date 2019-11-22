@@ -269,11 +269,13 @@ view: deal {
   dimension: property_software {
     type: string
     sql: ${TABLE}."PROPERTY_SOFTWARE" ;;
+    label: "Software"
   }
 
   dimension: property_vendor {
     type: string
     sql: ${TABLE}."PROPERTY_VENDOR" ;;
+    label: "Vendor"
   }
 
   measure: count {

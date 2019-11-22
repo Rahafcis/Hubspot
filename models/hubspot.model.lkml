@@ -42,8 +42,6 @@ explore: contact {
   relationship: many_to_many
   sql_on: ${contact.id}=${contact_property_history.contact_id} ;;
   }
-
-
     }
 explore: deal {
   join: deal_property_history{

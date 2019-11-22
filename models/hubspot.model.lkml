@@ -30,7 +30,7 @@ explore: company {
 
 join: deal {
   relationship: one_to_many
-  sql_on: ${company.portal_id}=${deal.portal_id} ;;
+  sql_on: ${company.property_hs_all_owner_ids}=${deal.property_hs_all_owner_ids} ;;
 }
 }
 

@@ -114,6 +114,7 @@ view: deal {
   dimension: name {
     type: string
     sql: Left(${property_dealname}, ${name_space}) ;;
+    label: "deal_name"
   }
 
   dimension: property_dealtype {

@@ -27,6 +27,11 @@ explore: company {
     relationship: many_to_many
     sql_on: ${company.id}=${contact.property_associatedcompanyid} ;;
   }
+
+  join: deal_company {
+    relationship: one_to_one
+    sql_on: ${company.id}=${deal_company.company_id} ;;
+  }
 join: deal {
   relationship: many_to_many
   sql_on: ${deal.property_dealname} liKE concat('%',${company.property_name},'%');;

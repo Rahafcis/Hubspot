@@ -29,6 +29,7 @@ explore: company {
   }
 
 join: deal {
+  type: inner
   relationship: one_to_one
   sql_on: ${company.property_hs_all_owner_ids}=${deal.property_hs_all_owner_ids} ;;
 }

@@ -3,7 +3,7 @@ view: deal {
   drill_fields: [deal_id]
 
   dimension: deal_id {
-
+    primary_key: yes
     type: number
     sql: ${TABLE}."DEAL_ID" ;;
   }
@@ -45,13 +45,11 @@ view: deal {
   dimension: portal_id {
     type: number
     sql: ${TABLE}."PORTAL_ID" ;;
-    primary_key: yes
   }
 
   dimension: property_amount {
     type: number
     sql: ${TABLE}."PROPERTY_AMOUNT" ;;
-    value_format_name: eur_0
   }
 
   dimension: property_amount_in_home_currency {
@@ -105,17 +103,6 @@ view: deal {
   dimension: property_dealname {
     type: string
     sql: ${TABLE}."PROPERTY_DEALNAME" ;;
-    label: "Deal"
-  }
-
-  dimension: name_space {
-    type: number
-    sql: charindex(' -',${property_dealname}) ;;
-  }
-
-  dimension: name {
-    type: string
-    sql: Left(${property_dealname}, ${name_space}) ;;
   }
 
   dimension: property_dealtype {
@@ -123,13 +110,13 @@ view: deal {
     sql: ${TABLE}."PROPERTY_DEALTYPE" ;;
   }
 
-  dimension: property_hours {
-    type: number
-    sql: ${TABLE}."PROPERTY_HOURS" ;;
+  dimension: property_description {
+    type: string
+    sql: ${TABLE}."PROPERTY_DESCRIPTION" ;;
   }
 
-  measure: total_hours {
-    type: sum
+  dimension: property_hours {
+    type: number
     sql: ${TABLE}."PROPERTY_HOURS" ;;
   }
 
@@ -276,6 +263,16 @@ view: deal {
   dimension: property_num_notes {
     type: number
     sql: ${TABLE}."PROPERTY_NUM_NOTES" ;;
+  }
+
+  dimension: property_software {
+    type: string
+    sql: ${TABLE}."PROPERTY_SOFTWARE" ;;
+  }
+
+  dimension: property_vendor {
+    type: string
+    sql: ${TABLE}."PROPERTY_VENDOR" ;;
   }
 
   measure: count {

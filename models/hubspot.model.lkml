@@ -49,7 +49,7 @@ explore: deal {
     sql_on: ${deal.deal_id}=${deal_property_history.deal_id} ;;
   }
   join: task_detail {
-    relationship: one_to_many
+    relationship: one_to_one
     sql_on:${deal.property_dealname}=${task_detail.project}  ;;
   }
 }

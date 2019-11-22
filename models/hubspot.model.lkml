@@ -32,9 +32,10 @@ explore: company {
     relationship: one_to_one
     sql_on: ${company.id}=${deal_company.company_id} ;;
   }
+
 join: deal {
   relationship: many_to_many
-  sql_on: ${deal.property_dealname} liKE concat('%',${company.property_name},'%');;
+  sql_on: ;;
 }
 }
 
@@ -51,6 +52,12 @@ explore: deal {
   join: deal_property_history{
     relationship: one_to_many
     sql_on: ${deal.deal_id}=${deal_property_history.deal_id} ;;
+  }
+
+  join: deal_company {
+    type: left_outer
+    relationship: one_to_one
+    sql_on: ${deal.deal_id}=${deal_company.deal_id}_id} ;;
   }
   join: task_detail {
     relationship: one_to_one

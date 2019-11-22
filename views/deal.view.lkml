@@ -3,7 +3,7 @@ view: deal {
   drill_fields: [deal_id]
 
   dimension: deal_id {
-    primary_key: yes
+
     type: number
     sql: ${TABLE}."DEAL_ID" ;;
   }
@@ -45,6 +45,7 @@ view: deal {
   dimension: portal_id {
     type: number
     sql: ${TABLE}."PORTAL_ID" ;;
+    primary_key: yes
   }
 
   dimension: property_amount {

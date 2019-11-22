@@ -103,6 +103,7 @@ view: deal {
   dimension: property_dealname {
     type: string
     sql: ${TABLE}."PROPERTY_DEALNAME" ;;
+    label: "Deal"
   }
 
   dimension: property_dealtype {

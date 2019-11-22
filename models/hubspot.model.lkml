@@ -52,6 +52,6 @@ explore: deal {
   }
   join: task_detail {
     relationship: one_to_many
-    sql_on:${deal.property_dealname}=${task_detail.project}  ;;
+    sql_on:${deal.name}=${task_detail.client}  ;;
   }
 }

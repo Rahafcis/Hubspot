@@ -54,6 +54,7 @@ view: task_detail {
   dimension: client {
     type: string
     sql: ${TABLE}."CLIENT" ;;
+    label: "Company"
 
     link: {
       label: "Search Client In Hubspot"

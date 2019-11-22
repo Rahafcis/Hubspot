@@ -14,7 +14,7 @@
 
   dimension: portal_id {
     type: number
-    sql: ${TABLE}."PORTAL_ID" ;;
+    sql: ${TABLE}."PORTAL_ID" ;
   }
 
   dimension: property_address {

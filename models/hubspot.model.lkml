@@ -34,7 +34,7 @@ explore: company {
   }
 
   join: deal {
-    relationship: one_to_many
+    relationship: one_to_one
     sql_on:${deal_company.deal_id}=${deal.deal_id} ;;
   }
 }

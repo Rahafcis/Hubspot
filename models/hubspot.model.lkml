@@ -18,7 +18,7 @@ explore: company {
 
   join: task_detail {
     type: left_outer
-    relationship: one_to_many
+    relationship: one_to_one
     sql_on: ${company.property_name}=${task_detail.client} ;;
   }
 

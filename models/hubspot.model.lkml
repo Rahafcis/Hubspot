@@ -16,12 +16,6 @@ explore: company {
     sql_on: ${company.id}=${company_property_history.company_id} ;;
   }
 
-  join: task_detail {
-    type: left_outer
-    relationship: one_to_one
-    sql_on: ${company.property_name}=${task_detail.client} ;;
-  }
-
   join: contact {
     type: left_outer
     relationship: many_to_many

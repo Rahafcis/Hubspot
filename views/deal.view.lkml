@@ -50,6 +50,7 @@ view: deal {
   dimension: property_amount {
     type: number
     sql: ${TABLE}."PROPERTY_AMOUNT" ;;
+    value_format_name: eur_0
   }
 
   dimension: property_amount_in_home_currency {

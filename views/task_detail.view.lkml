@@ -82,7 +82,7 @@ view: task_detail {
   measure: Total_DURATION_DECIMAL{
     type: sum
     sql: ${TABLE}."DURATION_DECIMAL_" ;;
-    drill_fields: [start_date, description, user, Total_DURATION_DECIMAL]
+    drill_fields: [start_date, description, user, Total_DURATION_DECIMAL, billable, tags]
   }
 
   dimension: duration_h_ {

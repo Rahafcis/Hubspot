@@ -111,12 +111,6 @@ view: deal {
       url: "https://app.hubspot.com/contacts/3068849/deal/{{ deal_id._value}}/"
       icon_url: "http://app.hubspot.com/favicon.ico"
     }
-
-    link: {
-      label: "View Deal in Clockify"
-      url: "https://clockify.me/projects/5ce2b2e2f15c986c490a6a39/edit"
-      icon_url: "https://user-images.githubusercontent.com/12108031/53167047-9bc14c80-35b5-11e9-877f-02e7c3e04f29.png"
-    }
   }
 
   dimension: property_dealtype {

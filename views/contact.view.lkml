@@ -81,7 +81,7 @@ view: contact {
         type: string
         required: yes
         default:
-        "{{property_email}}"
+        "{{email}}"
       }
 
       form_param: {

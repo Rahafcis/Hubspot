@@ -73,7 +73,7 @@ view: contact {
 
     action: {
       label: "Send email"
-      url: "https://hooks.zapier.com/hooks/catch/5919737/o41xnng/"
+      url: "https://hooks.zapier.com/hooks/catch/5919737/ohbpnyg/"
       icon_url: "https://sendgrid.com/favicon.ico"
 
       form_param: {

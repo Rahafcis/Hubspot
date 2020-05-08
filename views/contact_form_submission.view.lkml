@@ -37,6 +37,25 @@ view: contact_form_submission {
     sql: ${TABLE}."PAGE_URL" ;;
   }
 
+  dimension: partner {
+    type: string
+    sql: case
+            when ${page_url} like '%looker%' then 'Looker'
+            when ${page_url} like '%fivetran%' then 'Fivetran'
+            when ${page_url} like 'snowflake' then 'Snowflake'
+            else 'CIS Consulting'
+          end ;;
+      html: {% if value == 'Looker' %}
+      <p style="color: white; background-color: purple; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% elsif value == 'Snowflake' %}
+      <p style="color: white; background-color: lightblue; font-size:100%; text-align:center">{{ rendered_value }}</p>
+      {% elsif value == 'Fivetran' %}
+      <p style="color: white; background-color: navy; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% else %}
+      <p style="color: white; background-color: green; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% endif %} ;;
+  }
+
   dimension: portal_id {
     type: number
     sql: ${TABLE}."PORTAL_ID" ;;

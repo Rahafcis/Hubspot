@@ -52,6 +52,7 @@ view: contact {
   dimension: property_city {
     type: string
     sql: ${TABLE}."PROPERTY_CITY" ;;
+    label: "City"
   }
 
   dimension: Contact_Name {
@@ -254,7 +255,7 @@ view: contact {
     type: string
     sql: ${TABLE}."PROPERTY_FIRSTNAME" ;;
     group_label: "Contact Info"
-    label: "Contact_firstname"
+    label: "First Name"
   }
 
   dimension: property_followercount {
@@ -774,7 +775,7 @@ view: contact {
     type: string
     sql: ${TABLE}."PROPERTY_LASTNAME" ;;
     group_label: "Contact Info"
-    label: "Contact_lastname "
+    label: "Last Name"
   }
 
   dimension: property_lifecyclestage {
@@ -890,6 +891,7 @@ view: contact {
     type: string
     sql: ${TABLE}."PROPERTY_PHONE" ;;
     group_label: "Contact Info"
+    label: "Phone"
   }
 
   dimension: property_photo {

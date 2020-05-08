@@ -42,6 +42,7 @@ explore: contact {
   sql_on: ${contact.id}=${contact_property_history.contact_id} ;;
   }
     }
+
 explore: deal {
   join: deal_property_history{
     relationship: one_to_many
@@ -56,5 +57,23 @@ explore: deal {
   join: task_detail {
     relationship: one_to_one
     sql_on:${deal.property_dealname}=${task_detail.project}  ;;
+  }
+}
+
+explore: cis_event_signups {
+  label: "CIS Event Signups"
+  view_name: contact
+  sql_always_where: ${contact_form_submission.contact_id} IS NOT NULL ;;
+
+  join: contact_form_submission {
+    sql_on: ${contact.id} = ${contact_form_submission.contact_id} ;;
+    relationship: one_to_one
+    type: left_outer
+  }
+
+  join: company {
+    sql_on: ${contact.property_associatedcompanyid} = ${company.id} ;;
+    relationship: one_to_one
+    type: left_outer
   }
 }

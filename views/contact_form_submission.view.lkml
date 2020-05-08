@@ -14,6 +14,7 @@ view: contact_form_submission {
       year
     ]
     sql: CAST(${TABLE}."_FIVETRAN_SYNCED" AS TIMESTAMP_NTZ) ;;
+    hidden: yes
   }
 
   dimension: contact_id {
@@ -62,6 +63,7 @@ view: contact_form_submission {
   }
 
   dimension_group: timestamp {
+    label: "Event Signup"
     type: time
     timeframes: [
       raw,

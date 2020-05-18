@@ -728,7 +728,7 @@ view: contact {
   }
 
   dimension: property_ip_state {
-    label: "IP Country"
+    label: "IP City"
     type: string
     sql: initcap(${TABLE}."PROPERTY_IP_STATE") ;;
   }

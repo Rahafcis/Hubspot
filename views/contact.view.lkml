@@ -121,6 +121,17 @@ view: contact {
   dimension: property_company {
     type: string
     sql: ${TABLE}."PROPERTY_COMPANY" ;;
+    link: {
+      label: "Search on LinkedIn"
+      url: "https://www.linkedin.com/search/results/companies/?keywords={{ property_company }}&origin=SWITCH_SEARCH_VERTICAL"
+      icon_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png"
+    }
+
+    link: {
+      label: "Search on Cruchbase"
+      url: "https://www.crunchbase.com/organization/{{ property_company }}"
+      icon_url: "https://pbs.twimg.com/profile_images/1253417530380611585/-yUUl-Dx_400x400.jpg"
+    }
   }
 
   dimension: property_company_size {
@@ -252,10 +263,23 @@ view: contact {
   }
 
   dimension: property_firstname {
+   # required_fields: [id]
     type: string
     sql: ${TABLE}."PROPERTY_FIRSTNAME" ;;
     group_label: "Contact Info"
     label: "First Name"
+
+    link: {
+      label:: "Search on LinkedIn"
+      url: "https://www.linkedin.com/search/results/all/?keywords={{ property_firstname }}%20{{ property_lastname }}&origin=GLOBAL_SEARCH_HEADER"
+      icon_url: "https://image.flaticon.com/icons/svg/174/174857.svg"
+    }
+
+    link: {
+      label: "Update on HubSpot"
+      url: "https://app.hubspot.com/contacts/3068849/contact/{{ id._value }}/"
+      icon_url: "https://media-exp1.licdn.com/dms/image/C560BAQFhSyJmEbHWJw/company-logo_200_200/0?e=2159024400&v=beta&t=EPB2Wt63lokj12x7curh9CGkojnQSyLcOK-8hr-S8JU"
+    }
   }
 
   dimension: property_followercount {

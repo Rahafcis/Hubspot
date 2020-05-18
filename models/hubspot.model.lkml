@@ -4,10 +4,11 @@ connection: "fivetran_snowflake_cis"
 include: "/views/**/*.view"
 
 datagroup: hubspot_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
+  sql_trigger: SELECT MAX(_FIVETRAN_SYNCED) FROM  contact_form_submission;;
+  max_cache_age: "24 hours"
 }
 
+persist_with: hubspot_default_datagroup
 
 explore: company {
   join: company_property_history {

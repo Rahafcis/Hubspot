@@ -706,13 +706,14 @@ view: contact {
   }
 
   dimension: property_ip_city {
+    label: "IP City"
     type: string
-    sql: ${TABLE}."PROPERTY_IP_CITY" ;;
+    sql: initcap(${TABLE}."PROPERTY_IP_CITY") ;;
   }
 
   dimension: property_ip_country {
     type: string
-    sql: ${TABLE}."PROPERTY_IP_COUNTRY" ;;
+    sql: initcap(${TABLE}."PROPERTY_IP_COUNTRY") ;;
   }
 
   dimension: property_ip_country_code {
@@ -726,8 +727,9 @@ view: contact {
   }
 
   dimension: property_ip_state {
+    label: "IP Country"
     type: string
-    sql: ${TABLE}."PROPERTY_IP_STATE" ;;
+    sql: initcap(${TABLE}."PROPERTY_IP_STATE") ;;
   }
 
   dimension: property_ip_state_code {

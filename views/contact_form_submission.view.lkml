@@ -38,6 +38,18 @@ view: contact_form_submission {
     sql: ${TABLE}."PAGE_URL" ;;
   }
 
+  dimension: source {
+    type: string
+    sql: case when ${page_url} like '%verse%' then 'Registered via old Verse webinar landing page - SEND CORRECT VIDEO LINK'
+              when ${page_url} like '%metabase-looker%' then 'From Metabase to Looker in 60 Days On demand'
+              end;;
+    html: {% if value == 'Registered via old Verse webinar landing page - SEND CORRECT VIDEO LINK' %}
+    <p style="color: black; background-color: orange; font-size:120%; text-align:center">{{ rendered_value }}</p>
+        {% else %} <p style="color: black; background-color: lightblue; font-size:120%; text-align:center">{{ rendered_value }}</p>
+    {% endif %};;
+  }
+
+
   dimension: partner {
     type: string
     sql: case
@@ -49,7 +61,7 @@ view: contact_form_submission {
       html: {% if value == 'Looker' %}
       <p style="color: white; background-color: purple; font-size:100%; text-align:center">{{ rendered_value }}</p>
     {% elsif value == 'Snowflake' %}
-      <p style="color: white; background-color: lightblue; font-size:100%; text-align:center">{{ rendered_value }}</p>
+      <p style="color: white; background-color: skyblue; font-size:100%; text-align:center">{{ rendered_value }}</p>
       {% elsif value == 'Fivetran' %}
       <p style="color: white; background-color: navy; font-size:100%; text-align:center">{{ rendered_value }}</p>
     {% else %}

@@ -42,9 +42,14 @@ view: contact_form_submission {
     type: string
     sql: case when ${page_url} like '%verse%' then 'Registered via old Verse webinar landing page - SEND CORRECT VIDEO LINK'
               when ${page_url} like '%metabase-looker%' then 'From Metabase to Looker in 60 Days On demand'
+              when ${page_url} like '%automatizacion-consolidacion-financiera%' then 'Financial Consolidation Lucanet On Demand'
               end;;
     html: {% if value == 'Registered via old Verse webinar landing page - SEND CORRECT VIDEO LINK' %}
     <p style="color: black; background-color: orange; font-size:120%; text-align:center">{{ rendered_value }}</p>
+
+     {% elsif value == 'Financial Consolidation Lucanet On Demand' %}
+      <p style="color: white; background-color: green; font-size:120%; text-align:center">{{ rendered_value }}</p>
+
         {% else %} <p style="color: black; background-color: lightblue; font-size:120%; text-align:center">{{ rendered_value }}</p>
     {% endif %};;
   }

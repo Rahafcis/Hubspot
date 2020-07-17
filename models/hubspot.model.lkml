@@ -2,6 +2,7 @@ connection: "fivetran_snowflake_cis"
 
 # include all the views
 include: "/views/**/*.view"
+include: "/**/*.view"
 
 datagroup: hubspot_default_datagroup {
   sql_trigger: SELECT MAX(_FIVETRAN_SYNCED) FROM  contact_form_submission;;
@@ -35,6 +36,7 @@ explore: company {
 }
 
 explore: contact {
+  fields: [ALL_FIELDS*, -contact.pain_points]
 
   join: contact_property_history {
 
@@ -76,5 +78,15 @@ explore: cis_event_signups {
     sql_on: ${contact.property_associatedcompanyid} = ${company.id} ;;
     relationship: one_to_one
     type: left_outer
+  }
+}
+explore: cis_sales {
+  extends: [cis_event_signups]
+  sql_always_where: ${contact.property_firstname} is not null ;;
+  join: notion {
+    fields: [notion.notion]
+    sql_on: ${company.property_name} = ${notion.name} ;;
+    type: left_outer
+    relationship: one_to_one
   }
 }

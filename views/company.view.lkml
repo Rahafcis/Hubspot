@@ -22,6 +22,14 @@
     sql: ${TABLE}."PROPERTY_ADDRESS" ;;
   }
 
+  ## dimensions for sales explore
+  dimension: full_address{
+    type: string
+    sql: case when ${property_address_2} is null then 'Get Full Address' else ${property_address_2} end;;
+    html: <a href="https://www.google.com/search?safe=active&rlz=1C1CHBF_enES852ES852&ei=KH0QX_-pGqWNlwTDwqv4Bg&q={{ company.property_name | url_encode }}+full+address"><button>Get Full Address</button></a> ;;
+
+  }
+
   dimension: property_address_2 {
     type: string
     sql: ${TABLE}."PROPERTY_ADDRESS_2" ;;
@@ -33,6 +41,7 @@
   }
 
   dimension: property_bi {
+    label: "Company BI Tools"
     type: string
     sql: ${TABLE}."PROPERTY_BI" ;;
   }
@@ -279,12 +288,13 @@
   dimension: property_linkedin_company_page {
     type: string
     sql: ${TABLE}."PROPERTY_LINKEDIN_COMPANY_PAGE" ;;
-    label: "linkedin company page"
-    link: {
-      label: "Linkedin"
-      url: "{{property_linkedin_company_page}}"
-      icon_url: "https://image.flaticon.com/icons/svg/174/174857.svg"
-    }
+    label: "Linkedin Company Page"
+#     link: {
+#       label: "Linkedin"
+#       url: "{{property_linkedin_company_page}}"
+#       icon_url: "https://image.flaticon.com/icons/svg/174/174857.svg"
+#     }
+    html: <a href="{{rendered_value}}"><button>View LinkedIn Page</button></a> ;;
   }
 
 

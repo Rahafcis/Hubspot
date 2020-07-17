@@ -91,7 +91,8 @@ view: contact_form_submission {
       quarter,
       year
     ]
-    sql: CAST(${TABLE}."TIMESTAMP" AS TIMESTAMP_NTZ) ;;
+   # sql: CAST(${TABLE}."TIMESTAMP" AS TIMESTAMP_NTZ) ;;
+    sql: ${TABLE}."TIMESTAMP" ;;
   }
 
   dimension: title {

@@ -262,6 +262,23 @@ view: contact {
     sql: ${TABLE}."PROPERTY_FIRST_DEAL_CREATED_DATE" ;;
   }
 
+  ##### new dimensions for partner portal report
+
+  dimension: full_name {
+    type: string
+    sql: concat(concat(${property_firstname} , ' '), ${property_lastname}) ;;
+  }
+
+  dimension: pain_points {
+    type: string
+    sql: case when ${full_name} is not null then ${company.property_name} end ;;
+    html: <a href="https://www.notion.so/cisconsulting/Verse-14ae934dcef64060b1bffee193c0970d"><button>View Notes On Notion</button></a> ;;
+#     link: {
+#       url: "https://www.notion.so/cisconsulting/{{ company.property_linkedin_company_page }}"
+#       labe
+#     }<a href="https://www.notion.so/cisconsulting/{{ company.property_name | url_encode }}-"><button>View Notes On Notion</button></a> ;;
+  }
+
   dimension: property_firstname {
    # required_fields: [id]
     type: string

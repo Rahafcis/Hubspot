@@ -26,7 +26,7 @@
   dimension: full_address{
     type: string
     sql: case when ${property_address_2} is null then 'Get Full Address' else ${property_address_2} end;;
-    html: <a href="https://www.google.com/search?safe=active&rlz=1C1CHBF_enES852ES852&ei=KH0QX_-pGqWNlwTDwqv4Bg&q={{ company.property_name | url_encode }}+full+address"><button>Get Full Address</button></a> ;;
+    html: <a href="https://www.google.com/maps/search/{{ company.property_name | url_encode }}"><button>Get Full Address</button></a> ;;
 
   }
 

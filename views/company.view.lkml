@@ -486,4 +486,46 @@
     type: count
     drill_fields: [id, property_name, deal_company.count, engagement_company.count]
   }
+
+  #### NEW DIMENSIONS 31/07/20
+
+
+    dimension: registered {
+      type: string
+      sql:  ${TABLE}."PROPERTY_REGISTERED";;
+      group_label: "Partner Portal Registrations"
+    }
+
+#     dimension: registered_in_fivetran {
+#       group_label: "Partner Portal Registrations"
+#       type: yesno
+#       sql: ${registered} like '%Fivetran%' ;;
+#       }
+#
+#     dimension: registered_in_snowflake {
+#       group_label: "Partner Portal Registrations"
+#       type: yesno
+#       sql: ${registered} like '%Snowflake%' ;;
+#     }
+#
+#     dimension: registered_in_looker {
+#       group_label: "Partner Portal Registrations"
+#       type: yesno
+#       sql: ${registered} like '%Looker%' ;;
+#     }
+
+    dimension: registered_data_solutions_lead {
+      group_label: "Partner Portal Registrations"
+      description: "Fivetran, Snowflake, Looker registrations"
+      type: string
+      sql: case when ${registered} = 'Looker;Snowflake' then 'Registered in Looker, and Snowflake'
+          when ${registered} = 'Looker;Snowflake;Fivetran' then 'Registered in Fivetran, Looker, and Snowflake'
+          when ${registered} = 'Looker;Fivetran' then 'Registered in Fivetran and Looker'
+          when ${registered} = 'Snowflake;Fivetran' then 'Registered in Fivetran and Snowflake'
+          else 'Not registered or lost deal' end
+          ;;
+    }
+
+
+
 }

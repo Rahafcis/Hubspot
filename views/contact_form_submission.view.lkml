@@ -43,6 +43,10 @@ view: contact_form_submission {
     sql: case when ${page_url} like '%verse%' then 'Registered via old Verse webinar landing page - SEND CORRECT VIDEO LINK'
               when ${page_url} like '%metabase-looker%' then 'From Metabase to Looker in 60 Days On demand'
               when ${page_url} like '%automatizacion-consolidacion-financiera%' then 'Financial Consolidation Lucanet On Demand'
+              when ${page_url} like '%datacadabra%' then 'Datacadabra'
+              when ${page_url} like '%contact%' then 'Website Contact'
+              when ${page_url} like '%resources-webinars%' then 'Website Resources'
+              else ${page_url}
               end;;
     html: {% if value == 'Registered via old Verse webinar landing page - SEND CORRECT VIDEO LINK' %}
     <p style="color: black; background-color: orange; font-size:120%; text-align:center">{{ rendered_value }}</p>

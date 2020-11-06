@@ -64,7 +64,7 @@ explore: deal {
 }
 
 explore: cis_event_signups {
-  label: "CIS Event Signups"
+  label: "CIS Prospects and Clients"
   view_name: contact
   sql_always_where: ${contact_form_submission.contact_id} IS NOT NULL ;;
 

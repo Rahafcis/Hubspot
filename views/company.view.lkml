@@ -14,7 +14,7 @@
 
   dimension: portal_id {
     type: number
-    sql: ${TABLE}."PORTAL_ID" ;
+    sql: ${TABLE}."PORTAL_ID" ;;
   }
 
   dimension: property_address {
@@ -25,27 +25,50 @@
   ## dimensions for sales explore
   dimension: full_address{
     type: string
-    sql: case when ${property_address_2} is null then 'Get Full Address' else ${property_address_2} end;;
+    sql: case when ${address_2} is null then 'Get Full Address' else ${address_2} end;;
     html: <a href="https://www.google.com/maps/search/{{ company.property_name | url_encode }}"><button>Get Full Address</button></a> ;;
 
   }
 
-  dimension: property_address_2 {
-    type: string
+  dimension: address_2 {
+    hidden: yes
+      type: string
     sql: ${TABLE}."PROPERTY_ADDRESS_2" ;;
   }
 
-  dimension: property_annualrevenue {
+  dimension: annual_revenue {
     type: number
     sql: ${TABLE}."PROPERTY_ANNUALREVENUE" ;;
   }
 
   dimension: property_bi {
-    label: "Company BI Tools"
+    group_label: "Tech Stack"
+    label: "Company Data Tools"
     type: string
-    sql: ${TABLE}."PROPERTY_BI" ;;
+    sql: concat(${bi}, ', ',${data_warehouse}, ', ', ${data_etl});;
   }
 
+    dimension: bi {
+      group_label: "Tech Stack"
+      label: "BI"
+      hidden: no
+      type: string
+      sql:  ${TABLE}."PROPERTY_BI";;
+    }
+
+  dimension: data_warehouse {
+    group_label: "Tech Stack"
+    label: "Company Data Warehouse"
+    type: string
+    sql: ${TABLE}."PROPERTY_DW";;
+  }
+
+    dimension: data_etl {
+      group_label: "Tech Stack"
+      label: "Company ETL"
+      type: string
+      sql: ${TABLE}."PROPERTY_ETL";;
+    }
   dimension: property_city {
     type: string
     sql: ${TABLE}."PROPERTY_CITY" ;;

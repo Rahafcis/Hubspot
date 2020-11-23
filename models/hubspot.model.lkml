@@ -11,31 +11,32 @@ datagroup: hubspot_default_datagroup {
 
 persist_with: hubspot_default_datagroup
 
-explore: company {
-  join: company_property_history {
-    type: left_outer
-    relationship: many_to_many
-    sql_on: ${company.id}=${company_property_history.company_id} ;;
-  }
+# explore: company {
+#   join: company_property_history {
+#     type: left_outer
+#     relationship: many_to_many
+#     sql_on: ${company.id}=${company_property_history.company_id} ;;
+#   }
 
-  join: contact {
-    type: left_outer
-    relationship: many_to_many
-    sql_on: ${company.id}=${contact.associated_company_id} ;;
-  }
+#   join: contact {
+#     type: left_outer
+#     relationship: many_to_many
+#     sql_on: ${company.id}=${contact.associated_company_id} ;;
+#   }
 
-  join: deal_company {
-    relationship: one_to_one
-    sql_on: ${company.id}=${deal_company.company_id} ;;
-  }
+#   join: deal_company {
+#     relationship: one_to_one
+#     sql_on: ${company.id}=${deal_company.company_id} ;;
+#   }
 
-  join: deal {
-    relationship: one_to_one
-    sql_on:${deal_company.deal_id}=${deal.deal_id} ;;
-  }
-}
+#   join: deal {
+#     relationship: one_to_one
+#     sql_on:${deal_company.deal_id}=${deal.deal_id} ;;
+#   }
+# }
 
 explore: contact {
+  hidden: yes
   fields: [ALL_FIELDS*, -contact.pain_points]
 
   join: contact_property_history {
@@ -47,6 +48,7 @@ explore: contact {
     }
 
 explore: deal {
+  hidden: yes
   join: deal_property_history{
     relationship: one_to_many
     sql_on: ${deal.deal_id}=${deal_property_history.deal_id} ;;

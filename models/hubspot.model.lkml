@@ -21,7 +21,7 @@ explore: company {
   join: contact {
     type: left_outer
     relationship: many_to_many
-    sql_on: ${company.id}=${contact.property_associatedcompanyid} ;;
+    sql_on: ${company.id}=${contact.associated_company_id} ;;
   }
 
   join: deal_company {
@@ -64,7 +64,7 @@ explore: deal {
 }
 
 explore: cis_event_signups {
-  label: "CIS Prospects and Clients"
+  hidden: yes
   view_name: contact
   sql_always_where: ${contact_form_submission.contact_id} IS NOT NULL ;;
 
@@ -75,12 +75,14 @@ explore: cis_event_signups {
   }
 
   join: company {
-    sql_on: ${contact.property_associatedcompanyid} = ${company.id} ;;
+    sql_on: ${contact.associated_company_id} = ${company.id} ;;
     relationship: one_to_one
     type: left_outer
   }
 }
 explore: cis_sales {
+  label: "CIS Prospects and Clients"
+  hidden: no
   extends: [cis_event_signups]
   sql_always_where: ${contact.property_firstname} is not null ;;
   join: notion {

@@ -9,11 +9,12 @@ view: contact {
     }
 
   dimension: _fivetran_deleted {
+    hidden: yes
     type: yesno
     sql: ${TABLE}."_FIVETRAN_DELETED" ;;
   }
 
-  dimension_group: _fivetran_synced {
+  dimension_group: fivetran_synced {
     type: time
     timeframes: [
       raw,
@@ -28,28 +29,30 @@ view: contact {
     hidden: yes
   }
 
-  dimension: property_address {
+  dimension: home_address {
     type: string
     sql: ${TABLE}."PROPERTY_ADDRESS" ;;
   }
 
   dimension: property_annualrevenue {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_ANNUALREVENUE" ;;
   }
 
-  dimension: property_associatedcompanyid {
+  dimension: associated_company_id {
+    hidden: yes
     type: number
     value_format_name: id
     sql: ${TABLE}."PROPERTY_ASSOCIATEDCOMPANYID" ;;
   }
 
-  dimension: property_associatedcompanylastupdated {
+  dimension: associated_company_last_updated {
     type: number
     sql: ${TABLE}."PROPERTY_ASSOCIATEDCOMPANYLASTUPDATED" ;;
   }
 
-  dimension: property_city {
+  dimension: city {
     type: string
     sql: ${TABLE}."PROPERTY_CITY" ;;
     label: "City"
@@ -105,6 +108,7 @@ view: contact {
 
 
   dimension_group: property_closedate {
+    hidden: yes
     type: time
     timeframes: [
       raw,
@@ -119,6 +123,7 @@ view: contact {
   }
 
   dimension: property_company {
+    label: "Company"
     type: string
     sql: ${TABLE}."PROPERTY_COMPANY" ;;
     link: {
@@ -134,17 +139,17 @@ view: contact {
     }
   }
 
-  dimension: property_company_size {
+  dimension: company_size {
     type: string
     sql: ${TABLE}."PROPERTY_COMPANY_SIZE" ;;
   }
 
-  dimension: property_country {
+  dimension: country {
     type: string
     sql: ${TABLE}."PROPERTY_COUNTRY" ;;
   }
 
-  dimension_group: property_createdate {
+  dimension_group: created {
     type: time
     timeframes: [
       raw,
@@ -159,16 +164,18 @@ view: contact {
   }
 
   dimension: property_currentlyinworkflow {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_CURRENTLYINWORKFLOW" ;;
   }
 
-  dimension: property_date_of_birth {
+  dimension: date_of_birth {
     type: string
     sql: ${TABLE}."PROPERTY_DATE_OF_BIRTH" ;;
   }
 
   dimension: property_degree {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_DEGREE" ;;
   }
@@ -209,7 +216,7 @@ view: contact {
   }
 
 
-  dimension_group: property_engagements_last_meeting_booked {
+  dimension_group: engagements_last_meeting_booked {
     type: time
     timeframes: [
       raw,
@@ -223,32 +230,33 @@ view: contact {
     sql: ${TABLE}."PROPERTY_ENGAGEMENTS_LAST_MEETING_BOOKED" ;;
   }
 
-  dimension: property_engagements_last_meeting_booked_campaign {
+  dimension: engagements_last_meeting_booked_campaign {
     type: string
     sql: ${TABLE}."PROPERTY_ENGAGEMENTS_LAST_MEETING_BOOKED_CAMPAIGN" ;;
   }
 
-  dimension: property_engagements_last_meeting_booked_medium {
+  dimension: engagements_last_meeting_booked_medium {
     type: string
     sql: ${TABLE}."PROPERTY_ENGAGEMENTS_LAST_MEETING_BOOKED_MEDIUM" ;;
   }
 
-  dimension: property_engagements_last_meeting_booked_source {
+  dimension: engagements_last_meeting_booked_source {
     type: string
     sql: ${TABLE}."PROPERTY_ENGAGEMENTS_LAST_MEETING_BOOKED_SOURCE" ;;
   }
 
-  dimension: property_fax {
+  dimension: fax {
     type: string
     sql: ${TABLE}."PROPERTY_FAX" ;;
   }
 
   dimension: property_field_of_study {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_FIELD_OF_STUDY" ;;
   }
 
-  dimension_group: property_first_deal_created {
+  dimension_group: first_deal_created {
     type: time
     timeframes: [
       raw,
@@ -300,46 +308,52 @@ view: contact {
   }
 
   dimension: property_followercount {
+    hidden: yes
     type: number
     sql: ${TABLE}."PROPERTY_FOLLOWERCOUNT" ;;
   }
 
-  dimension: property_gender {
+  dimension: gender {
     type: string
     sql: ${TABLE}."PROPERTY_GENDER" ;;
   }
 
   dimension: property_graduation_date {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_GRADUATION_DATE" ;;
   }
 
   dimension: property_hs_all_accessible_team_ids {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HS_ALL_ACCESSIBLE_TEAM_IDS" ;;
   }
 
   dimension: property_hs_all_owner_ids {
+    hidden: yes
     type: number
     sql: ${TABLE}."PROPERTY_HS_ALL_OWNER_IDS" ;;
   }
 
   dimension: property_hs_all_team_ids {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HS_ALL_TEAM_IDS" ;;
   }
 
   dimension: property_hs_analytics_average_page_views {
+    hidden: yes
     type: number
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_AVERAGE_PAGE_VIEWS" ;;
   }
 
-  dimension: property_hs_analytics_first_referrer {
+  dimension: analytics_first_referrer {
     type: string
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_FIRST_REFERRER" ;;
   }
 
-  dimension_group: property_hs_analytics_first_timestamp {
+  dimension_group: analytics_first_timestamp {
     type: time
     timeframes: [
       raw,
@@ -353,167 +367,181 @@ view: contact {
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_FIRST_TIMESTAMP" ;;
   }
 
-  dimension: property_hs_analytics_first_touch_converting_campaign {
+  dimension: analytics_first_touch_converting_campaign {
     type: string
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_FIRST_TOUCH_CONVERTING_CAMPAIGN" ;;
   }
 
   dimension: property_hs_analytics_first_url {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_FIRST_URL" ;;
   }
 
-  dimension: property_hs_analytics_last_referrer {
+  dimension: analytics_last_referrer {
     type: string
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_LAST_REFERRER" ;;
   }
 
   dimension: property_hs_analytics_last_touch_converting_campaign {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_LAST_TOUCH_CONVERTING_CAMPAIGN" ;;
   }
 
   dimension: property_hs_analytics_last_url {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_LAST_URL" ;;
   }
 
-  dimension: property_hs_analytics_num_event_completions {
+  dimension: number_of_event_completions {
     type: number
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_NUM_EVENT_COMPLETIONS" ;;
   }
 
-  dimension: property_hs_analytics_num_page_views {
+  dimension: number_of_page_views {
     type: number
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_NUM_PAGE_VIEWS" ;;
   }
 
-  dimension: property_hs_analytics_num_visits {
+  dimension: number_of_visits {
     type: number
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_NUM_VISITS" ;;
   }
 
   dimension: property_hs_analytics_revenue {
+    hidden: yes
     type: number
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_REVENUE" ;;
   }
 
-  dimension: property_hs_analytics_source {
+  dimension: analytics_source {
     type: string
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_SOURCE" ;;
   }
 
-  dimension: property_hs_analytics_source_data_1 {
+  dimension: analytics_source_data_1 {
     type: string
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_SOURCE_DATA_1" ;;
   }
 
-  dimension: property_hs_analytics_source_data_2 {
+  dimension: analytics_source_data_2 {
     type: string
     sql: ${TABLE}."PROPERTY_HS_ANALYTICS_SOURCE_DATA_2" ;;
   }
 
   dimension: property_hs_avatar_filemanager_key {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HS_AVATAR_FILEMANAGER_KEY" ;;
   }
 
   dimension: property_hs_buying_role {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HS_BUYING_ROLE" ;;
   }
 
-  dimension: property_hs_content_membership_notes {
+  dimension: content_membership_notes {
     type: string
     sql: ${TABLE}."PROPERTY_HS_CONTENT_MEMBERSHIP_NOTES" ;;
   }
 
   dimension: property_hs_content_membership_registration_domain_sent_to {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HS_CONTENT_MEMBERSHIP_REGISTRATION_DOMAIN_SENT_TO" ;;
   }
 
   dimension: property_hs_content_membership_status {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HS_CONTENT_MEMBERSHIP_STATUS" ;;
   }
 
-  dimension: property_hs_conversations_visitor_email {
+  dimension: conversations_visitor_email {
     type: string
     sql: ${TABLE}."PROPERTY_HS_CONVERSATIONS_VISITOR_EMAIL" ;;
   }
 
   dimension: property_hs_email_last_email_name {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HS_EMAIL_LAST_EMAIL_NAME" ;;
   }
 
-  dimension: property_hs_email_optout {
+  dimension: email_optout {
     type: yesno
     sql: ${TABLE}."PROPERTY_HS_EMAIL_OPTOUT" ;;
   }
 
-  dimension: property_hs_email_optout_3308717 {
+  dimension: email_optout_details {
     type: string
     sql: ${TABLE}."PROPERTY_HS_EMAIL_OPTOUT_3308717" ;;
   }
 
   dimension: property_hs_email_quarantined {
+    hidden: yes
     type: yesno
     sql: ${TABLE}."PROPERTY_HS_EMAIL_QUARANTINED" ;;
   }
 
-  dimension: property_hs_emailconfirmationstatus {
+  dimension: email_confirmation_status {
     type: string
     sql: ${TABLE}."PROPERTY_HS_EMAILCONFIRMATIONSTATUS" ;;
   }
 
-  dimension: property_hs_facebookid {
+  dimension: facebook_id {
     type: string
     sql: ${TABLE}."PROPERTY_HS_FACEBOOKID" ;;
   }
 
-  dimension: property_hs_feedback_last_nps_follow_up {
+  dimension: feedback_last_nps_follow_up {
     type: string
     sql: ${TABLE}."PROPERTY_HS_FEEDBACK_LAST_NPS_FOLLOW_UP" ;;
   }
 
   dimension: property_hs_feedback_last_nps_rating {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HS_FEEDBACK_LAST_NPS_RATING" ;;
   }
 
-  dimension: property_hs_google_click_id {
+  dimension: google_click_id {
     type: string
     sql: ${TABLE}."PROPERTY_HS_GOOGLE_CLICK_ID" ;;
   }
 
   dimension: property_hs_googleplusid {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HS_GOOGLEPLUSID" ;;
   }
 
-  dimension: property_hs_ip_timezone {
+  dimension: ip_timezone {
     type: string
     sql: ${TABLE}."PROPERTY_HS_IP_TIMEZONE" ;;
   }
 
   dimension: property_hs_language {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HS_LANGUAGE" ;;
   }
 
-  dimension: property_hs_lead_status {
+  dimension: lead_status {
     type: string
     sql: ${TABLE}."PROPERTY_HS_LEAD_STATUS" ;;
   }
 
   dimension: property_hs_legal_basis {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HS_LEGAL_BASIS" ;;
   }
 
-  dimension_group: property_hs_lifecyclestage_customer {
+  dimension_group: life_cyclestage_customer {
     type: time
     timeframes: [
       raw,
@@ -528,6 +556,7 @@ view: contact {
   }
 
   dimension_group: property_hs_lifecyclestage_evangelist {
+    hidden: yes
     type: time
     timeframes: [
       raw,
@@ -542,6 +571,7 @@ view: contact {
   }
 
   dimension_group: property_hs_lifecyclestage_lead {
+    hidden: yes
     type: time
     timeframes: [
       raw,
@@ -556,6 +586,7 @@ view: contact {
   }
 
   dimension_group: property_hs_lifecyclestage_marketingqualifiedlead {
+    hidden: yes
     type: time
     timeframes: [
       raw,
@@ -570,6 +601,7 @@ view: contact {
   }
 
   dimension_group: property_hs_lifecyclestage_opportunity {
+    hidden: yes
     type: time
     timeframes: [
       raw,
@@ -584,6 +616,7 @@ view: contact {
   }
 
   dimension_group: property_hs_lifecyclestage_other {
+    hidden: yes
     type: time
     timeframes: [
       raw,
@@ -598,6 +631,7 @@ view: contact {
   }
 
   dimension_group: property_hs_lifecyclestage_salesqualifiedlead {
+    hidden: yes
     type: time
     timeframes: [
       raw,
@@ -612,6 +646,7 @@ view: contact {
   }
 
   dimension_group: property_hs_lifecyclestage_subscriber {
+    hidden: yes
     type: time
     timeframes: [
       raw,
@@ -625,27 +660,30 @@ view: contact {
     sql: ${TABLE}."PROPERTY_HS_LIFECYCLESTAGE_SUBSCRIBER_DATE" ;;
   }
 
-  dimension: property_hs_linkedinid {
+  dimension: linkedin_id {
     type: string
     sql: ${TABLE}."PROPERTY_HS_LINKEDINID" ;;
   }
 
   dimension: property_hs_persona {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HS_PERSONA" ;;
   }
 
   dimension: property_hs_predictivecontactscorebucket {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HS_PREDICTIVECONTACTSCOREBUCKET" ;;
   }
 
   dimension: property_hs_predictivescoringtier {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HS_PREDICTIVESCORINGTIER" ;;
   }
 
-  dimension_group: property_hs_sales_email_last_clicked {
+  dimension_group: sales_email_last_clicked {
     type: time
     timeframes: [
       raw,
@@ -659,7 +697,7 @@ view: contact {
     sql: ${TABLE}."PROPERTY_HS_SALES_EMAIL_LAST_CLICKED" ;;
   }
 
-  dimension_group: property_hs_sales_email_last_opened {
+  dimension_group: sales_email_last_opened {
     type: time
     timeframes: [
       raw,
@@ -673,7 +711,7 @@ view: contact {
     sql: ${TABLE}."PROPERTY_HS_SALES_EMAIL_LAST_OPENED" ;;
   }
 
-  dimension_group: property_hs_sales_email_last_replied {
+  dimension_group: sales_email_last_replied {
     type: time
     timeframes: [
       raw,
@@ -688,36 +726,43 @@ view: contact {
   }
 
   dimension: property_hs_social_facebook_clicks {
+    hidden: yes
     type: number
     sql: ${TABLE}."PROPERTY_HS_SOCIAL_FACEBOOK_CLICKS" ;;
   }
 
   dimension: property_hs_social_google_plus_clicks {
+    hidden: yes
     type: number
     sql: ${TABLE}."PROPERTY_HS_SOCIAL_GOOGLE_PLUS_CLICKS" ;;
   }
 
   dimension: property_hs_social_linkedin_clicks {
+    hidden: yes
     type: number
     sql: ${TABLE}."PROPERTY_HS_SOCIAL_LINKEDIN_CLICKS" ;;
   }
 
   dimension: property_hs_social_num_broadcast_clicks {
+    hidden: yes
     type: number
     sql: ${TABLE}."PROPERTY_HS_SOCIAL_NUM_BROADCAST_CLICKS" ;;
   }
 
   dimension: property_hs_social_twitter_clicks {
+    hidden: yes
     type: number
     sql: ${TABLE}."PROPERTY_HS_SOCIAL_TWITTER_CLICKS" ;;
   }
 
   dimension: property_hs_twitterid {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HS_TWITTERID" ;;
   }
 
   dimension_group: property_hubspot_owner_assigneddate {
+    hidden: yes
     type: time
     timeframes: [
       raw,
@@ -732,16 +777,19 @@ view: contact {
   }
 
   dimension: property_hubspot_owner_id {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HUBSPOT_OWNER_ID" ;;
   }
 
   dimension: property_hubspot_team_id {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_HUBSPOT_TEAM_ID" ;;
   }
 
   dimension: property_industry {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_INDUSTRY" ;;
   }
@@ -758,12 +806,13 @@ view: contact {
     sql: initcap(${TABLE}."PROPERTY_IP_COUNTRY") ;;
   }
 
-  dimension: property_ip_country_code {
+  dimension: ip_country_code {
     type: string
     sql: ${TABLE}."PROPERTY_IP_COUNTRY_CODE" ;;
   }
 
   dimension: property_ip_latlon {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_IP_LATLON" ;;
   }
@@ -775,16 +824,17 @@ view: contact {
   }
 
   dimension: property_ip_state_code {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_IP_STATE_CODE" ;;
   }
 
-  dimension: property_ip_zipcode {
+  dimension: ip_zipcode {
     type: string
     sql: ${TABLE}."PROPERTY_IP_ZIPCODE" ;;
   }
 
-  dimension: property_job_function {
+  dimension: job_function {
     type: string
     sql: ${TABLE}."PROPERTY_JOB_FUNCTION" ;;
   }
@@ -797,11 +847,12 @@ view: contact {
   }
 
   dimension: property_kloutscoregeneral {
+    hidden: yes
     type: number
     sql: ${TABLE}."PROPERTY_KLOUTSCOREGENERAL" ;;
   }
 
-  dimension_group: property_lastmodifieddate {
+  dimension_group: last_modified {
     type: time
     timeframes: [
       raw,
@@ -823,42 +874,47 @@ view: contact {
   }
 
   dimension: property_lifecyclestage {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_LIFECYCLESTAGE" ;;
   }
 
-  dimension: property_linkedinbio {
+  dimension: linkedin_bio {
     type: string
     sql: ${TABLE}."PROPERTY_LINKEDINBIO" ;;
   }
 
   dimension: property_linkedinconnections {
+    hidden: yes
     type: number
     sql: ${TABLE}."PROPERTY_LINKEDINCONNECTIONS" ;;
   }
 
   dimension: property_marital_status {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_MARITAL_STATUS" ;;
   }
 
-  dimension: property_message {
+  dimension:message {
     type: string
     sql: ${TABLE}."PROPERTY_MESSAGE" ;;
   }
 
   dimension: property_military_status {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_MILITARY_STATUS" ;;
   }
 
   dimension: property_mobilephone {
+    label: "Mobile Phone"
     type: string
     sql: ${TABLE}."PROPERTY_MOBILEPHONE" ;;
     group_label: "Contact Info"
   }
 
-  dimension_group: property_notes_last_contacted {
+  dimension_group: last_contacted_notes {
     type: time
     timeframes: [
       raw,
@@ -872,7 +928,7 @@ view: contact {
     sql: ${TABLE}."PROPERTY_NOTES_LAST_CONTACTED" ;;
   }
 
-  dimension_group: property_notes_last_updated {
+  dimension_group:notes_last_updated {
     type: time
     timeframes: [
       raw,
@@ -887,6 +943,7 @@ view: contact {
   }
 
   dimension_group: property_notes_next_activity {
+    hidden: yes
     type: time
     timeframes: [
       raw,
@@ -900,33 +957,37 @@ view: contact {
     sql: ${TABLE}."PROPERTY_NOTES_NEXT_ACTIVITY_DATE" ;;
   }
 
-  dimension: property_num_associated_deals {
+  dimension: number_of_associated_deals {
     type: number
     sql: ${TABLE}."PROPERTY_NUM_ASSOCIATED_DEALS" ;;
   }
 
   dimension: property_num_contacted_notes {
+    hidden: yes
     type: number
     sql: ${TABLE}."PROPERTY_NUM_CONTACTED_NOTES" ;;
   }
 
   dimension: property_num_notes {
+    hidden: yes
     type: number
     sql: ${TABLE}."PROPERTY_NUM_NOTES" ;;
 
   }
 
   dimension: property_numemployees {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_NUMEMPLOYEES" ;;
   }
 
   dimension: property_owneremail {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_OWNEREMAIL" ;;
   }
 
-  dimension: property_ownername {
+  dimension: owner_name {
     type: string
     sql: ${TABLE}."PROPERTY_OWNERNAME" ;;
   }
@@ -939,16 +1000,17 @@ view: contact {
   }
 
   dimension: property_photo {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_PHOTO" ;;
   }
 
-  dimension: property_recent_deal_amount {
+  dimension: recent_deal_amount {
     type: number
     sql: ${TABLE}."PROPERTY_RECENT_DEAL_AMOUNT" ;;
   }
 
-  dimension_group: property_recent_deal_close {
+  dimension_group: recent_deal_close {
     type: time
     timeframes: [
       raw,
@@ -963,61 +1025,70 @@ view: contact {
   }
 
   dimension: property_relationship_status {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_RELATIONSHIP_STATUS" ;;
   }
 
   dimension: property_salutation {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_SALUTATION" ;;
   }
 
   dimension: property_school {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_SCHOOL" ;;
   }
 
   dimension: property_seniority {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_SENIORITY" ;;
   }
 
   dimension: property_start_date {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_START_DATE" ;;
   }
 
-  dimension: property_state {
+  dimension: state {
     type: string
     sql: ${TABLE}."PROPERTY_STATE" ;;
   }
 
   dimension: property_total_revenue {
+    hidden: yes
     type: number
     sql: ${TABLE}."PROPERTY_TOTAL_REVENUE" ;;
   }
 
   dimension: property_twitterbio {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_TWITTERBIO" ;;
   }
 
   dimension: property_twitterhandle {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_TWITTERHANDLE" ;;
   }
 
   dimension: property_twitterprofilephoto {
+    hidden: yes
     type: string
     sql: ${TABLE}."PROPERTY_TWITTERPROFILEPHOTO" ;;
   }
 
-  dimension: property_website {
+  dimension: contact_website {
     type: string
     sql: ${TABLE}."PROPERTY_WEBSITE" ;;
   }
 
-  dimension: property_work_email {
+  dimension: work_email {
     type: string
     sql: ${TABLE}."PROPERTY_WORK_EMAIL" ;;
   }
@@ -1029,6 +1100,6 @@ view: contact {
 
   measure: count {
     type: count
-    drill_fields: [id, property_hs_email_last_email_name, property_firstname, property_ownername, property_lastname]
+    drill_fields: [id, property_hs_email_last_email_name, property_firstname, owner_name, property_lastname]
   }
 }

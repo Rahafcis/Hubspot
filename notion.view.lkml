@@ -12,12 +12,13 @@ view: notion {
   dimension: notion {
     label: "Pain Points"
     sql: case
-          when ${name} like 'Verse' then 'https://www.notion.so/cisconsulting/Verse-14ae934dcef64060b1bffee193c0970d'
+          when ${name} like 'Verse%' then 'https://www.notion.so/cisconsulting/Verse-14ae934dcef64060b1bffee193c0970d'
           when ${name} like 'Afterbanks' then 'https://www.notion.so/cisconsulting/Afterbanks-e399adfe9ffa486f9d47ba4fb0e519e3'
-          when ${name} like 'Strad' then 'https://www.notion.so/cisconsulting/Stradivarius-1e0e57bea98148ccb2cffb4c6a382f3a'
-          when ${name} like 'Adevinta' then 'https://www.notion.so/cisconsulting/Adevinta-Schibsted-Media-Group-d9fdfb6b9cfa46b69a0128ee76a7b82c'
-          when ${name} like 'Alea' then 'https://www.notion.so/cisconsulting/Alea-Play-6979c17b74c64050bd94cfb00e3cfbb7'
+          when ${name} like 'Strad%' then 'https://www.notion.so/cisconsulting/Stradivarius-1e0e57bea98148ccb2cffb4c6a382f3a'
+          when ${name} like 'Adevinta%' then 'https://www.notion.so/cisconsulting/Adevinta-Schibsted-Media-Group-d9fdfb6b9cfa46b69a0128ee76a7b82c'
+          when ${name} like 'Alea%' then 'https://www.notion.so/cisconsulting/Alea-Play-6979c17b74c64050bd94cfb00e3cfbb7'
           when ${name} like 'Paack' then 'https://www.notion.so/cisconsulting/Paack-b4f06916d6904a88a4e7475624b64354'
+          when ${name} like 'Beonprice' then 'https://www.notion.so/cisconsulting/Beonprice-974b231c53284b3bb8c730a39b0a9bf3'
           else 'https://www.notion.so/cisconsulting/Projects-7b538742f44c423ebe530ef020bdebe5'
     end
     ;;

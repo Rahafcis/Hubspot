@@ -45,7 +45,7 @@
     group_label: "Tech Stack"
     label: "Company Data Tools"
     type: string
-    sql: concat(${bi}, ', ',${data_warehouse}, ', ', ${data_etl});;
+    sql: concat(ifnull(${bi},'BI Unknown'), ', ',ifnull(${data_warehouse},'Data Warehouse Unknown'), ', ', ifnull(${data_etl}, 'ETL unknown'));;
   }
 
     dimension: bi {

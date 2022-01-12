@@ -82,6 +82,9 @@ explore: cis_event_signups {
     type: left_outer
   }
 }
+
+explore: company {}
+
 explore: cis_sales {
   label: "CIS Prospects and Clients"
   hidden: no

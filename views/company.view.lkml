@@ -454,12 +454,6 @@
     sql: ${TABLE}."PROPERTY_RECENT_DEAL_CLOSE_DATE" ;;
   }
 
-  dimension: property_responsable_comercial_de_oracle {
-    type: string
-    sql: ${TABLE}."PROPERTY_RESPONSABLE_COMERCIAL_DE_ORACLE" ;;
-    label: " Technology Interest "
-  }
-
   dimension: property_state {
     type: string
     sql: ${TABLE}."PROPERTY_STATE" ;;

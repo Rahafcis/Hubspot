@@ -1,4 +1,6 @@
-connection: "fivetran_snowflake_cis"
+#connection: "fivetran_snowflake_cis"
+connection: "snowflake_cis_new"
+
 
 # include all the views
 include: "/views/**/*.view"
@@ -58,10 +60,6 @@ explore: deal {
     type: left_outer
     relationship: one_to_one
     sql_on: ${deal.deal_id}=${deal_company.deal_id} ;;
-  }
-  join: task_detail {
-    relationship: one_to_one
-    sql_on:${deal.property_dealname}=${task_detail.project}  ;;
   }
 }
 
